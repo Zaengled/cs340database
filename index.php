@@ -45,7 +45,7 @@
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
-                    <a href="#menu-toggle">
+                    <a id="menu-toggle" href="#menu-toggle">
                         <span class="glyphicon glyphicon-menu-hamburger"></span>
                     </a>
                 </li>
@@ -73,7 +73,6 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
-					    <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Menu</a>
 						<h1>Climb On</h1>
 						<h2>Quick Info</h2>
 						<p>To navigate, use the Menu button above. To view a list of Gyms, Outdoor locations, or stores click one of the links in the menu. To learn more about us or answer any frequently asked questions go to the About page.</p>
