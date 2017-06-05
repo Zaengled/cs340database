@@ -49,23 +49,18 @@
                     <h4>Climb On!</h4>
                 </li>
                 <li>
-                    <span class="glyphicon glyphicon-log-in"></span>
                     <a href="#">Login</a>
                 </li>
                 <li>
-                    <span class="glyphicon glyphicon-map-marker"></span>
                     <a href="gyms.php">Gym</a>
                 </li>
                 <li>
-                    <span class="glyphicon glyphicon-map-marker"></span>
                     <a href="#">Outdoors</a>
                 </li>
                 <li>
-                    <span class="glyphicon glyphicon-map-marker"></span>
                     <a href="#">Store</a>
                 </li>
                 <li>
-                    <span class="glyphicon glyphicon-info-sign"></span>
                     <a href="about.php">About</a>
                 </li>
             </ul>
