@@ -45,7 +45,9 @@
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
-                    <a class="glyphicon glyphicon-menu-hamburger"></a>
+                    <a>
+                        <span class="glyphicon glyphicon-menu-hamburger"></span>
+                    </a>
                 </li>
                 <li>
                     <a href="#">Login</a
