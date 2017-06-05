@@ -41,9 +41,6 @@
 
     <div id="wrapper" class="toggled">
 
-
-    </div>
-
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
             <ul id="sidebar_menu" class="sidebar-nav">
