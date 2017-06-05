@@ -39,7 +39,7 @@
 
 <body>
 
-    <div id="wrapper" class="toggled">
+    <div id="wrapper" class="active">
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
             <ul id="sidebar_menu" class="sidebar-nav">
@@ -120,7 +120,7 @@
     <script>
     $("#menu-toggle").click(function(e) {
         e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
+        $("#wrapper").toggleClass("active");
     });
     </script>
 
