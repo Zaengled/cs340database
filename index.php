@@ -44,11 +44,11 @@
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
-                <li class="sidebar-brand">
+                <h4 class="sidebar-brand">
+                    Climb On!
                     <span class="glyphicon glyphicon-menu-hamburger"></span>
-                    <h4>Climb On!</h4>
-                </li>
-                <li>
+                </h4>
+                <li>g
                     <a href="#">Login</a>
                 </li>
                 <li>
