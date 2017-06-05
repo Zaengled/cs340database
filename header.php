@@ -16,6 +16,7 @@
 
     <!-- Custom CSS -->
     <link href="css/simple-sidebar.css" rel="stylesheet">
+    <link href="css/modal.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -23,18 +24,7 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <?php
-    include 'connect.php';
-    if (!$mysqli) {
-        die('Could not connect: ' . mysqli_error());
-    }
-    $sql1 = "SELECT * FROM `GymAndLocation` WHERE City = 'Corvallis' ";
-    $sql2 = "SELECT * FROM `SiteAndLocation` WHERE City = 'Corvallis' ";
-    $sql3 = "SELECT * FROM `StoreAndLocation` WHERE City = 'Corvallis' ";
-    $result1 = mysqli_query($mysqli, $sql1);
-    $result2 = mysqli_query($mysqli, $sql2);
-    $result3 = mysqli_query($mysqli, $sql3);
-    ?>
+
 </head>
 
 <body>

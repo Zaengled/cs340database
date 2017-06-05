@@ -1,4 +1,17 @@
 <?php include 'header.php'; ?>
+<?php
+include 'connect.php';
+if (!$mysqli) {
+    die('Could not connect: ' . mysqli_error());
+}
+$sql1 = "SELECT * FROM `GymAndLocation` WHERE City = 'Corvallis' ";
+$sql2 = "SELECT * FROM `SiteAndLocation` WHERE City = 'Corvallis' ";
+$sql3 = "SELECT * FROM `StoreAndLocation` WHERE City = 'Corvallis' ";
+$result1 = mysqli_query($mysqli, $sql1);
+$result2 = mysqli_query($mysqli, $sql2);
+$result3 = mysqli_query($mysqli, $sql3);
+?>
+
 <div class="row">
     <div class="col-lg-12">
         <h1>Climb On</h1>
