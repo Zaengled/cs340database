@@ -10,6 +10,9 @@
     <meta name="author" content="">
 
     <title>ClimbOn - Your climbing location resource!</title>
+	
+	<!-- popup modal CSS -->
+	<link href="css/modal.css" rel="stylesheet">
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -28,6 +31,10 @@
 		if ($_GET["objid"]){
 			$sql = "SELECT * FROM `GymAndLocation` WHERE `objid` = ".$_GET["objid"];
 			$result = mysqli_query($mysqli, $sql);
+			$sql2 = "SELECT * FROM `Reviews` WHERE `objid` = ".$_GET["objid"];
+			$result2 = mysqli_query($mysqli, $sql2);
+			$sql3 = "SELECT * FROM `Route` WHERE `locationID` = ".$_GET["objid"];
+			$result3 = mysqli_query($mysqli, $sql3);
 		}
 	?>
 </head>
@@ -80,6 +87,63 @@
 								echo "Rating: " . $row["stars"];
 								}
 						?>
+						<h2> REVEIWS: </h2>
+						<table width="80%">
+						<tr>
+							<th>Stars</th>
+							<th>User</th>
+							<th>Review Date</th>
+						</tr>
+						<?php
+							if($result2->num_rows > 0){
+								while($row = $result2->fetch_assoc()) {
+									echo "<tr onclick='reviewModal(";
+									echo json_encode($row);
+									echo ")'><td>" . $row["stars"] . "</td><td>" . $row["userName"] . "</td><td>" . $row["timestamp"] . "</td></tr>";
+								}
+							} else {
+								echo "<tr><td>No reveiws yet!</td></tr>";
+							}
+						?>
+						</table>
+						
+						<h2> ROUTES: </h2>
+						
+						<table width="80%">
+						<tr>
+							<th>Route Number</th>
+							<th>Difficulty</th>
+						</tr>
+						<?php 
+							if($result3->num_rows > 0){
+								while($row = $result3->fetch_assoc()) {
+									echo "<tr onclick='routeModal(";
+									echo json_encode($row);
+									echo ") '><td>" . $row["routeID"] . "</td><td>" . $row["difficulty"] . "</td></tr>";
+								}
+							} else {
+								echo "<tr><td>No routes yet!</td></tr>";
+							}
+						?>
+						</table>
+						
+						<!-- The Modal -->
+						<div id="myModal" class="modal">
+							<!-- Modal content -->
+							<div class="modal-content">
+								<div class="modal-header">
+									<span class="close">&times;</span>
+									<h2 id="mh1">Modal Header</h2>
+								</div>
+								<div class="modal-body">
+									<p id="cont">Some text in the Modal Body</p>
+								</div>
+								<div class="modal-footer">
+									<h3 id="mh2">Modal Footer</h3>
+								</div>
+							</div>
+						</div>
+						
                     </div>
                 </div>
             </div>
@@ -95,6 +159,9 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
+	<!-- Modal JavaScript -->
+    <script src="js/modal.js"></script>
+	
     <!-- Menu Toggle Script -->
     <script>
     $("#menu-toggle").click(function(e) {
