@@ -44,12 +44,12 @@
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
-                <h4 class="sidebar-brand">
+                <li class="sidebar-brand">
                     Climb On!
                     <span class="glyphicon glyphicon-menu-hamburger"></span>
-                </h4>
-                <li>g
-                    <a href="#">Login</a>
+                </li>
+                <li>
+                    <a href="#">Login</a
                 </li>
                 <li>
                     <a href="gyms.php">Gym</a>
