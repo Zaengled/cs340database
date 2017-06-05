@@ -45,7 +45,7 @@
     </div>
 
         <!-- Sidebar -->
-        <div id="wrapper" class="toggled">
+        <div id="sidebar-wrapper">
             <ul id="sidebar_menu" class="sidebar-nav">
                 <li class="sidebar-brand"><a id="menu-toggle" href="#">Menu<span id="main_icon" class="glyphicon glyphicon-menu-hamburger"></span></a></li>
             </ul>
