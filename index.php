@@ -46,7 +46,7 @@
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
                     Climb On!
-                    <span class="glyphicon glyphicon-menu-hamburger"></span>
+                    <a class="glyphicon glyphicon-menu-hamburger"></a>
                 </li>
                 <li>
                     <a href="#">Login</a
