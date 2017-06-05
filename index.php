@@ -45,7 +45,7 @@
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
-                    <a>
+                    <a href="#menu-toggle">
                         <span class="glyphicon glyphicon-menu-hamburger"></span>
                     </a>
                 </li>
