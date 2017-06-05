@@ -75,32 +75,40 @@
 						<h2>Quick Info</h2>
 						<p>To navigate, use the Menu button above. To view a list of Gyms, Outdoor locations, or stores click one of the links in the menu. To learn more about us or answer any frequently asked questions go to the About page.</p>
 						<h2>Nearby</h2>
-						<?php 
-							echo "<h3>  Gyms: </h3>";
-							if ($result1->num_rows > 0) {
-								while($row = $result1->fetch_assoc()) {
-									echo "<p>Name: ".$row["name"]."</p>";
-								}
-							} else {
-								echo "Nothing Nearby!";
-							}
-							echo "<h3>  Sites: </h3>";
-							if ($result2->num_rows > 0) {
-								while($row = $result2->fetch_assoc()) {
-									echo "<p>Name: ".$row["name"]."</p>";
-								}
-							} else {
-								echo "Nothing Nearby!";
-							}
-							echo "<h3>  Stores: </h3>";
-							if ($result3->num_rows > 0) {
-								while($row = $result3->fetch_assoc()) {
-									echo "<p>Name: ".$row["name"]."</p>";
-								}
-							} else {
-								echo "Nothing Nearby!";
-							}
-						?>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                Gyms
+                            </div>
+                            <div class="panel-body"></div>
+                            <ul class="item-group">
+                                <?php
+                                    if ($result1->num_rows > 0) {
+                                        while($row = $result1->fetch_assoc()) {
+                                            echo "<a class='list-group-item' href='#'>".$row["name"]."</a>";
+                                        }
+                                    } else {
+                                        echo "<li class='list-group-item'>Nothing Nearby!</li>";
+                                    }
+                                ?>
+                            </ul>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                Stores
+                            </div>
+                            <div class="panel-body"></div>
+                            <ul class="item-group">
+                                <?php
+                                    if ($result2->num_rows > 0) {
+                                        while($row = $result2->fetch_assoc()) {
+                                            echo "<a class='list-group-item' href='#'>".$row["name"]."</a>";
+                                        }
+                                    } else {
+                                        echo "<li class='list-group-item'>Nothing Nearby!</li>";
+                                    }
+                                ?>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
