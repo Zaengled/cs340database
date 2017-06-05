@@ -41,29 +41,20 @@
 
     <div id="wrapper" class="toggled">
 
+
+    </div>
+
         <!-- Sidebar -->
-        <div id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <li class="sidebar-brand">
-                    <a id="menu-toggle" href="#menu-toggle">
-                        <span class="glyphicon glyphicon-menu-hamburger"></span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">Login</a
-                </li>
-                <li>
-                    <a href="gyms.php">Gym</a>
-                </li>
-                <li>
-                    <a href="#">Outdoors</a>
-                </li>
-                <li>
-                    <a href="#">Store</a>
-                </li>
-                <li>
-                    <a href="about.php">About</a>
-                </li>
+        <div id="wrapper" class="toggled">
+            <ul id="sidebar_menu" class="sidebar-nav">
+                <li class="sidebar-brand"><a id="menu-toggle" href="#">Menu<span id="main_icon" class="glyphicon glyphicon-menu-hamburger"></span></a></li>
+            </ul>
+            <ul class="sidebar-nav" id="sidebar">
+                <li><a>Login<span class="sub_icon glyphicon glyphicon-link"></span></a></li>
+                <li><a href="gyms.php">Gym<span class="sub_icon glyphicon glyphicon-map-marker"></span></a></li>
+                <li><a href="#">Outdoor<span class="sub_icon glyphicon glyphicon-leaf"></span></a></li>
+                <li><a href="#">Store<span class="sub_icon glyphicon glyphicon-shopping-cart"></span></a></li>
+                <li><a href="#">About<span class="sub_icon glyphicon glyphicon-info-sign"></span></a></li>
             </ul>
         </div>
         <!-- /#sidebar-wrapper -->
