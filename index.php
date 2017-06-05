@@ -45,20 +45,27 @@
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
-                    <a href="#">
-                        Login
-                    </a>
+                    <span class="glyphicon glyphicon-menu-hamburger"></span>
+                    <h4>Climb On!</h4>
                 </li>
                 <li>
+                    <span class="glyphicon glyphicon-log-in"></span>
+                    <a href="#">Login</a>
+                </li>
+                <li>
+                    <span class="glyphicon glyphicon-map-marker"></span>
                     <a href="gyms.php">Gym</a>
                 </li>
                 <li>
+                    <span class="glyphicon glyphicon-map-marker"></span>
                     <a href="#">Outdoors</a>
                 </li>
                 <li>
+                    <span class="glyphicon glyphicon-map-marker"></span>
                     <a href="#">Store</a>
                 </li>
                 <li>
+                    <span class="glyphicon glyphicon-info-sign"></span>
                     <a href="about.php">About</a>
                 </li>
             </ul>
