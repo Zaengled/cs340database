@@ -40,14 +40,18 @@
 <body>
 
     <div id="wrapper" class="toggled">
-
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
             <ul id="sidebar_menu" class="sidebar-nav">
-                <li class="sidebar-brand"><a id="menu-toggle" href="#">Menu<span id="main_icon" class="glyphicon glyphicon-menu-hamburger"></span></a></li>
+                <li class="sidebar-brand">
+                    <a id="menu-toggle" href="#">
+                        Menu
+                        <span id="main_icon" class="glyphicon glyphicon-menu-hamburger"></span>
+                    </a>
+                </li>
             </ul>
             <ul class="sidebar-nav" id="sidebar">
-                <li><a>Login<span class="sub_icon glyphicon glyphicon-link"></span></a></li>
+                <li><a href="#">Login<span class="sub_icon glyphicon glyphicon-link"></span></a></li>
                 <li><a href="gyms.php">Gym<span class="sub_icon glyphicon glyphicon-map-marker"></span></a></li>
                 <li><a href="#">Outdoor<span class="sub_icon glyphicon glyphicon-leaf"></span></a></li>
                 <li><a href="#">Store<span class="sub_icon glyphicon glyphicon-shopping-cart"></span></a></li>
@@ -69,7 +73,6 @@
                             <div class="panel-heading">
                                 Gyms
                             </div>
-                            <div class="panel-body"></div>
                             <ul class="list-group">
                                 <?php
                                     if ($result1->num_rows > 0) {
@@ -86,7 +89,6 @@
                             <div class="panel-heading">
                                 Stores
                             </div>
-                            <div class="panel-body"></div>
                             <ul class="list-group">
                                 <?php
                                     if ($result2->num_rows > 0) {
