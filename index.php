@@ -80,7 +80,7 @@
                                 Gyms
                             </div>
                             <div class="panel-body"></div>
-                            <ul class="item-group">
+                            <ul class="list-group">
                                 <?php
                                     if ($result1->num_rows > 0) {
                                         while($row = $result1->fetch_assoc()) {
@@ -97,7 +97,7 @@
                                 Stores
                             </div>
                             <div class="panel-body"></div>
-                            <ul class="item-group">
+                            <ul class="list-group">
                                 <?php
                                     if ($result2->num_rows > 0) {
                                         while($row = $result2->fetch_assoc()) {
