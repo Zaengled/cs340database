@@ -7,10 +7,11 @@ echo "<a href='submitreview.php?objid=" .$_GET['objid']."&userName=Zaengru&type=
     <div class="panel-header">
         Reviews
     </div>
+    <ul class="list-group">
     <?php
     if($reviews->num_rows > 0){
     while($row = $reviews->fetch_assoc()) {
-    echo "<li onclick='reviewModal(";
+    echo "<a class='list-group-item' onclick='reviewModal(";
     echo json_encode($row);
     echo ")'><span>" . $row["stars"] . "</span><span>" . $row["userName"] . "</span><span class='timestamp'>" . $row["timestamp"] . "</span></li>";
     }
@@ -18,5 +19,6 @@ echo "<a href='submitreview.php?objid=" .$_GET['objid']."&userName=Zaengru&type=
     echo "<tr><td>No reviews yet!</td></tr>";
     }
     ?>
+    </ul>
 
 </div>
