@@ -6,7 +6,7 @@ if (!$mysqli) {
 }
 $sql1 = "SELECT * FROM `GymAndLocation` WHERE City = 'Corvallis' ";
 $sql2 = "SELECT * FROM `SiteAndLocation` WHERE City = 'Corvallis' ";
-$sql3 = "SELECT * FROM `StoreAndLocation` WHERE City = 'Corvallis' ";
+$sql3 = "SELECT * FROM `StoreAndLocation` WHERE city = 'Corvallis' ";
 $result1 = mysqli_query($mysqli, $sql1);
 $result2 = mysqli_query($mysqli, $sql2);
 $result3 = mysqli_query($mysqli, $sql3);
@@ -24,7 +24,7 @@ $result3 = mysqli_query($mysqli, $sql3);
                 <?php
                     if ($result1->num_rows > 0) {
                         while($row = $result1->fetch_assoc()) {
-                            echo "<a class='list-group-item' href='#'>".$row["name"]."</a>";
+                            echo "<a class='list-group-item' href='gympage.php?objid=".$row["objid"]."'>".$row["name"]."</a>";
                         }
                     } else {
                         echo "<li class='list-group-item'>Nothing Nearby!</li>";
@@ -35,6 +35,22 @@ $result3 = mysqli_query($mysqli, $sql3);
         <div class="panel panel-default">
             <div class="panel-heading">
                 Stores
+            </div>
+            <ul class="list-group">
+                <?php
+                    if ($result3->num_rows > 0) {
+                        while($row = $result3->fetch_assoc()) {
+                            echo "<a class='list-group-item' href='#'>".$row["name"]."</a>";
+                        }
+                    } else {
+                        echo "<li class='list-group-item'>Nothing Nearby!</li>";
+                    }
+                ?>
+            </ul>
+        </div>
+		<div class="panel panel-default">
+            <div class="panel-heading">
+                Outdoor Sites
             </div>
             <ul class="list-group">
                 <?php
