@@ -22,7 +22,7 @@
                 echo "<span class='timestamp'>" . $row["timestamp"] . "</span></a>";
             }
         } else {
-            echo "<li> No reviews yet!</li>";
+            echo "<li class='list-group-item'> No reviews yet!</li>";
         }
         ?>
     </ul>
