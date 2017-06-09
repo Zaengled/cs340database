@@ -2,6 +2,7 @@
 <?php
 echo "<a href='submitreview.php?objid=" .$_GET['objid']."&userName=Zaengru&type=1'><button type='button'>Submit Review</button></a>"
 ?>
+
 <table width="80%">
     <tr>
         <th>Stars</th>

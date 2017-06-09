@@ -28,7 +28,6 @@ if ($_GET["objid"]) {
                             <?php echo $gym['rating']; ?>
                         </small>
                     </h2>
-
                 </div>
                 <div class="panel-body">
                     <?php echo $gym['bio']; ?>
