@@ -21,5 +21,10 @@ echo "<a href='submitreview.php?objid=" . $_GET['objid'] . "&userName=Zaengru&ty
         }
         ?>
     </ul>
-
+    <div class="panel-footer">
+        <a href="submitreview.php?objid=<?php echo $_GET['objid'] ?>&userName=Zaengru&type=1">
+            Add Review
+            <span class="glyphicon glyphicon-plus"></span>
+        </a>
+    </div>
 </div>
