@@ -13,7 +13,6 @@ if ($_GET["objid"]){
 
 <div class="row">
     <div class="col-lg-12">
-        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Menu</a>
         <h1>Climb On</h1>
         <h2> GYM:
         <?php
@@ -26,6 +25,9 @@ if ($_GET["objid"]){
                 }
         ?>
         <h2> REVEIWS: </h2>
+		<?php 
+			echo "<a href='submitreview.php?objid=" .$_GET['objid']."&userName=Zaengru&type=1'><button type='button'>Submit Review</button></a>"
+		?>
         <table width="80%">
         <tr>
             <th>Stars</th>
