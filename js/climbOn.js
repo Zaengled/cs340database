@@ -8,6 +8,7 @@ function Momentify(){
 
 $(document).ready(
     function(){
+        console.log("Running climbOn.js");
         Momentify();
     }
 );
