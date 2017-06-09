@@ -42,7 +42,7 @@ if ($_GET["objid"]){
                     echo ")'><td>" . $row["stars"] . "</td><td>" . $row["userName"] . "</td><td>" . $row["timestamp"] . "</td></tr>";
                 }
             } else {
-                echo "<tr><td>No reveiws yet!</td></tr>";
+                echo "<tr><td>No reviews yet!</td></tr>";
             }
         ?>
         </table>
