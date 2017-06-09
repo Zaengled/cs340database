@@ -5,7 +5,7 @@ if ($_GET["objid"]){
     $sql = "SELECT * FROM `StoreAndLocation` WHERE `objid` = ".$_GET["objid"];
     $result = mysqli_query($mysqli, $sql);
     $sql2 = "SELECT * FROM `Reviews` WHERE `objid` = ".$_GET["objid"];
-    $result2 = mysqli_query($mysqli, $sql2);
+    $reviews = mysqli_query($mysqli, $sql2);
 
 }
 ?>
@@ -23,28 +23,7 @@ if ($_GET["objid"]){
                 echo "Rating: " . $row["stars"];
                 }
         ?>
-        <h2> REVIEWS: </h2>
-		<?php 
-			echo "<a href='submitreview.php?objid=" .$_GET['objid']."&userName=Zaengru&type=1'><button type='button'>Submit Review</button></a>"
-		?>
-        <table width="80%">
-        <tr>
-            <th>Stars</th>
-            <th>User</th>
-            <th>Review Date</th>
-        </tr>
-        <?php
-            if($result2->num_rows > 0){
-                while($row = $result2->fetch_assoc()) {
-                    echo "<tr onclick='reviewModal(";
-                    echo json_encode($row);
-                    echo ")'><td>" . $row["stars"] . "</td><td>" . $row["userName"] . "</td><td>" . $row["timestamp"] . "</td></tr>";
-                }
-            } else {
-                echo "<tr><td>No reviews yet!</td></tr>";
-            }
-        ?>
-        </table>
+        <?php include 'reviews_inset.php'?>
 
         <!-- The Modal -->
         <div id="myModal" class="modal">
