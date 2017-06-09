@@ -9,7 +9,17 @@
             while ($row = $reviews->fetch_assoc()) {
                 echo "<a class='list-group-item' onclick='reviewModal(";
                 echo json_encode($row);
-                echo ")'><span>" . $row["stars"] . "</span><span>" . $row["userName"] . "</span><span class='timestamp'>" . $row["timestamp"] . "</span></a>";
+                echo ")'>";
+                for ($i = 1; $i < 5; $i++){
+                    if ($i < (int)$row["stars"]){
+                        echo "<span class='glyphicon glyphicon-star'></span>";
+                    }else{
+                        echo "<span class='glyphicon glyphicon-star-empty'></span>";
+                    }
+                }
+                echo "<span> ${row["stars"]}</span>";
+                echo "<span>" . $row["userName"] . "</span>";
+                echo "<span class='timestamp'>" . $row["timestamp"] . "</span></a>";
             }
         } else {
             echo "<li> No reviews yet!</li>";
