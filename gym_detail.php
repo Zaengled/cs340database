@@ -24,6 +24,7 @@ if ($_GET["objid"]) {
                     <h2>
                         <?php echo $gym['name']; ?>
                         <small style="float:right;" class="rating">
+                            <span class="glyphicon glyphicon-star"></span>
                             <?php echo $gym['rating']; ?>
                         </small>
                     </h2>
