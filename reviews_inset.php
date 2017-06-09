@@ -10,6 +10,7 @@
                 echo "<a class='list-group-item review' onclick='reviewModal(";
                 echo json_encode($row);
                 echo ")'>";
+                echo "<span class='stars'>";
                 for ($i = 1; $i <= 5; $i++){
                     if ($i <= (int)$row["stars"]){
                         echo "<span class='glyphicon glyphicon-star'></span>";
@@ -17,6 +18,7 @@
                         echo "<span class='glyphicon glyphicon-star-empty'></span>";
                     }
                 }
+                echo "</span>";
                 echo "<span> ${row["stars"]}</span>";
                 echo "<span>" . $row["userName"] . "</span>";
                 echo "<span class='timestamp'>" . $row["timestamp"] . "</span></a>";
