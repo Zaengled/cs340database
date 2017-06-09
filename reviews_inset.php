@@ -19,8 +19,7 @@
                     }
                 }
                 echo "</span>";
-                echo "<span> ${row["stars"]}</span>";
-                echo "<span>" . $row["userName"] . "</span>";
+                echo "<span class='fill'>" . $row["userName"] . "</span>";
                 echo "<span class='timestamp'>" . $row["timestamp"] . "</span></a>";
             }
         } else {
