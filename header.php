@@ -48,7 +48,7 @@
             <li><a href="gym_list.php">Gym<span class="sub_icon glyphicon glyphicon-map-marker"></span></a></li>
             <li><a href="site_list.php">Outdoor<span class="sub_icon glyphicon glyphicon-leaf"></span></a></li>
             <li><a href="store_list.php">Store<span class="sub_icon glyphicon glyphicon-shopping-cart"></span></a></li>
-            <li><a href="#">About<span class="sub_icon glyphicon glyphicon-info-sign"></span></a></li>
+            <li><a href="about.php">About<span class="sub_icon glyphicon glyphicon-info-sign"></span></a></li>
         </ul>
     </div>
     <!-- /#sidebar-wrapper -->
