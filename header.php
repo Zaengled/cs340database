@@ -17,6 +17,7 @@
     <!-- Custom CSS -->
     <link href="css/simple-sidebar.css" rel="stylesheet">
     <link href="css/modal.css" rel="stylesheet">
+    <link href="css/climbOn.css" rel="stylesheet">
 
     <!-- Moment -->
     <script src="js/moment.min.js"></script>
