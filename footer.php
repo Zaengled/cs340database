@@ -14,6 +14,9 @@
 <!-- Modal JavaScript -->
 <script src="js/modal.js"></script>
 
+<!-- Custom JavaScript -->
+<script src="js/climbOn.js"></script>
+
 <!-- Menu Toggle Script -->
 <script>
     $("#menu-toggle").click(function(e) {
