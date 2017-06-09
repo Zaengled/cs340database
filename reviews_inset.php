@@ -1,8 +1,3 @@
-<h2> REVIEWS: </h2>
-<?php
-echo "<a href='submitreview.php?objid=" . $_GET['objid'] . "&userName=Zaengru&type=1'><button type='button'>Submit Review</button></a>"
-?>
-
 <div class="panel panel-default">
     <div class="panel-heading">
         Reviews
