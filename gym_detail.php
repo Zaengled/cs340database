@@ -21,7 +21,7 @@ if ($_GET["objid"]){
                 echo " " . $row["name"] . "</h2>";
                 echo "About: " . $row["bio"] . "<br>";
                 echo "Address: " . $row["address"] . " " . $row["city"] . ", " . $row["state"] . " " . $row["zip"] . "<br>";
-                echo "Rating: " . $row["stars"];
+                echo "Rating: " . $row["rating"];
                 }
         ?>
         <h2> REVIEWS: </h2>
@@ -39,7 +39,7 @@ if ($_GET["objid"]){
                 while($row = $result2->fetch_assoc()) {
                     echo "<tr onclick='reviewModal(";
                     echo json_encode($row);
-                    echo ")'><td>" . $row["stars"] . "</td><td>" . $row["userName"] . "</td><td class='timestamp'>" . $row["timestamp"] . "</td></tr>";
+                    echo ")'><td>" . $row["stars"] . "</td><td>" . $row["userName"] . "</td><td>" . $row["timestamp"] . "</td></tr>";
                 }
             } else {
                 echo "<tr><td>No reviews yet!</td></tr>";
