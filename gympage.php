@@ -10,6 +10,7 @@ if ($_GET["objid"]){
     $result3 = mysqli_query($mysqli, $sql3);
 }
 ?>
+
 <div class="row">
     <div class="col-lg-12">
         <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Menu</a>
