@@ -11,7 +11,7 @@
                 echo json_encode($row);
                 echo ")'>";
                 for ($i = 1; $i <= 5; $i++){
-                    if ($i < (int)$row["stars"]){
+                    if ($i <= (int)$row["stars"]){
                         echo "<span class='glyphicon glyphicon-star'></span>";
                     }else{
                         echo "<span class='glyphicon glyphicon-star-empty'></span>";
