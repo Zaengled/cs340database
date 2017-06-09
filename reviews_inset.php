@@ -4,7 +4,7 @@ echo "<a href='submitreview.php?objid=" . $_GET['objid'] . "&userName=Zaengru&ty
 ?>
 
 <div class="panel panel-default">
-    <div class="panel-header">
+    <div class="panel-heading">
         Reviews
     </div>
 
