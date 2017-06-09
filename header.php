@@ -57,3 +57,6 @@
     <!-- Page Content -->
     <div id="page-content-wrapper">
         <div class="container-fluid page-content inset">
+            <div class="content-header">
+                Climb On
+            </div>
