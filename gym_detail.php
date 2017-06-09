@@ -39,7 +39,7 @@ if ($_GET["objid"]){
                 while($row = $result2->fetch_assoc()) {
                     echo "<tr onclick='reviewModal(";
                     echo json_encode($row);
-                    echo ")'><td>" . $row["stars"] . "</td><td>" . $row["userName"] . "</td><td>" . $row["timestamp"] . "</td></tr>";
+                    echo ")'><td>" . $row["stars"] . "</td><td>" . $row["userName"] . "</td><td class='timestamp'>" . $row["timestamp"] . "</td></tr>";
                 }
             } else {
                 echo "<tr><td>No reviews yet!</td></tr>";
