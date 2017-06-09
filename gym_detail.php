@@ -21,7 +21,7 @@ if ($_GET["objid"]){
     <div class="col-lg-12">
         <div class="panel panel-default"> <!--Gym info panel-->
             <div class="panel-heading">
-                <h1><?php echo $gym['name'];?></h1>
+                <h2><?php echo $gym['name'];?></h2>
                 <span style="float:right;" class="rating">
                     <?php echo $gym['rating']; ?>
                 </span>
