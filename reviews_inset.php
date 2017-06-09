@@ -10,7 +10,7 @@
                 echo "<a class='list-group-item' onclick='reviewModal(";
                 echo json_encode($row);
                 echo ")'>";
-                for ($i = 1; $i < 5; $i++){
+                for ($i = 1; $i <= 5; $i++){
                     if ($i < (int)$row["stars"]){
                         echo "<span class='glyphicon glyphicon-star'></span>";
                     }else{
