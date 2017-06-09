@@ -38,7 +38,7 @@
         <ul id="sidebar_menu" class="sidebar-nav">
             <li class="sidebar-brand">
                 <a id="menu-toggle" href="#">
-                    Menu
+                    Climb On
                     <span id="main_icon" class="glyphicon glyphicon-menu-hamburger"></span>
                 </a>
             </li>

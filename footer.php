@@ -19,7 +19,7 @@
 
 <!-- Menu Toggle Script -->
 <script>
-    $("#menu-toggle").click(function(e) {
+    $("#main_icon").click(function(e) {
         e.preventDefault();
         $("#wrapper").toggleClass("active");
     });
