@@ -20,7 +20,7 @@ if ($_GET["objid"]){
                 echo " " . $row["name"] . "</h2>";
                 echo "About: " . $row["bio"] . "<br>";
                 echo "Address: " . $row["address"] . " " . $row["city"] . ", " . $row["state"] . " " . $row["zip"] . "<br>";
-                echo "Rating: " . $row["stars"];
+                echo "Rating: " . $row["rating"];
                 }
         ?>
         <h2> REVIEWS: </h2>
