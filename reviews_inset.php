@@ -29,7 +29,7 @@
     <div class="panel-footer">
         <a href="submitreview.php?objid=<?php echo $_GET['objid'] ?>&userName=Zaengru&type=1">
             Add Review
-            <span class="glyphicon glyphicon-plus"></span>
+            <span class="glyphicon glyphicon-plus-sign"></span>
         </a>
     </div>
 </div>
