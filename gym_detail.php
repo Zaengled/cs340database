@@ -8,22 +8,28 @@ if ($_GET["objid"]){
     $reviews = mysqli_query($mysqli, $sql2);
     $sql3 = "SELECT * FROM `Route` WHERE `locationID` = ".$_GET["objid"];
     $result3 = mysqli_query($mysqli, $sql3);
+
+
+    if($result->num_rows > 0){
+        $gym = $result->fetch_assoc();
+    }
+
 }
 ?>
 
 <div class="row">
     <div class="col-lg-12">
-        <h1>Climb On</h1>
-        <h2> GYM:
-        <?php
-            if($result->num_rows > 0){
-                $row = $result->fetch_assoc();
-                echo " " . $row["name"] . "</h2>";
-                echo "About: " . $row["bio"] . "<br>";
-                echo "Address: " . $row["address"] . " " . $row["city"] . ", " . $row["state"] . " " . $row["zip"] . "<br>";
-                echo "Rating: " . $row["stars"];
-                }
-        ?>
+        <div class="panel panel-default"> <!--Gym info panel-->
+            <div class="panel-heading">
+                <?php echo $gym['name'];?>
+                <span style="float:right;" class="rating">
+                    <?php echo $gym['rating']; ?>
+                </span>
+            </div>
+            <div class="panel-body">
+                <?php echo $gym['bio']; ?>
+            </div>
+        </div>
 
         <?php include 'reviews_inset.php'?>
 
