@@ -4,9 +4,10 @@
 }
 .review > span{
     flex-grow: 0;
+    margin: 0 5px;
     justify-content: space-around;
     align-items:center;
 }
-.review > span .fill{
+.review > span.fill{
     flex-grow: 1;
 }
