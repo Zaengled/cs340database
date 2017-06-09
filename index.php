@@ -24,7 +24,7 @@ $result3 = mysqli_query($mysqli, $sql3);
                 <?php
                     if ($result1->num_rows > 0) {
                         while($row = $result1->fetch_assoc()) {
-                            echo "<a class='list-group-item' href='gympage.php?objid=".$row["objid"]."'>".$row["name"]."</a>";
+                            echo "<a class='list-group-item' href='gym_detail.php?objid=".$row["objid"]."'>".$row["name"]."</a>";
                         }
                     } else {
                         echo "<li class='list-group-item'>Nothing Nearby!</li>";
