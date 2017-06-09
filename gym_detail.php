@@ -24,7 +24,7 @@ if ($_GET["objid"]){
                 echo "Rating: " . $row["stars"];
                 }
         ?>
-        <h2> REVEIWS: </h2>
+        <h2> REVIEWS: </h2>
 		<?php 
 			echo "<a href='submitreview.php?objid=" .$_GET['objid']."&userName=Zaengru&type=1'><button type='button'>Submit Review</button></a>"
 		?>
