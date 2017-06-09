@@ -7,7 +7,7 @@
         <?php
         if ($reviews->num_rows > 0) {
             while ($row = $reviews->fetch_assoc()) {
-                echo "<a class='list-group-item' onclick='reviewModal(";
+                echo "<a class='list-group-item review' onclick='reviewModal(";
                 echo json_encode($row);
                 echo ")'>";
                 for ($i = 1; $i <= 5; $i++){
