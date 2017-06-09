@@ -37,10 +37,10 @@
     <div id="sidebar-wrapper">
         <ul id="sidebar_menu" class="sidebar-nav">
             <li class="sidebar-brand">
-                <a id="menu-toggle" href="index.php">
-                    Climb On
-                </a>
-                <span id="main_icon" class="glyphicon glyphicon-menu-hamburger"></span>
+                <div>
+                    <a style="display:inline-block" href="index.php">Climb On</a>
+                    <span id="main_icon" class="glyphicon glyphicon-menu-hamburger"></span>
+                </div>
             </li>
         </ul>
         <ul class="sidebar-nav" id="sidebar">
