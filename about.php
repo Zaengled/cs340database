@@ -42,7 +42,7 @@
                     <a href="index.php">Home</a>
                 </li>
                 <li>
-                    <a href="gyms.php">Gym</a>
+                    <a href="gym_list.php">Gym</a>
                 </li>
                 <li>
                     <a href="#">Outdoors</a>
