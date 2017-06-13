@@ -52,8 +52,6 @@
     text-decoration: none;
     width: 150px;
     background: #252525;
-    border-top: 1px solid #373737;
-    border-bottom: 1px solid #1A1A1A;
     -webkit-transition: background .5s;
     -moz-transition: background .5s;
     -o-transition: background .5s;

@@ -68,7 +68,7 @@
             </li>
         </ul>
         <ul class="sidebar-nav" id="sidebar">
-            <li><a href="index.php">Home<span class="sub_icon glyphicon glyphicon-home"</a></li>
+            <li><a href="index.php">Home<span class="sub_icon glyphicon glyphicon-home"></span></a></li>
             <li><a href="gym_list.php">Gym<span class="sub_icon glyphicon glyphicon-map-marker"></span></a></li>
             <li><a href="site_list.php">Outdoor<span class="sub_icon glyphicon glyphicon-leaf"></span></a></li>
             <li><a href="store_list.php">Store<span class="sub_icon glyphicon glyphicon-shopping-cart"></span></a></li>
