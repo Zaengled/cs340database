@@ -56,7 +56,6 @@
     from {transform: scale(0)} 
     to {transform: scale(1)}
 }
-
 login > .container {
     display: flex;
     flex-direction: column;

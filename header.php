@@ -41,16 +41,14 @@
     <!-- Modal Content -->
     <form class="modal-content animate" action="login.php" method="POST">
 
-        <div class="container">
-            <div class="input-group">
-                <input id="name" class="form-control" type="text" placeholder="Username" name="username" required>
-            </div>
-            <div class="input-group">
-                <input id="password" class="form-control" type="password" placeholder="Password" name="password" required>
-            </div>
-            <div class="input-group">
-                <input class="btn" class="form-control" name="submit" type="submit" value="Login">
-            </div>
+        <div class="input-group">
+            <input id="name" class="form-control" type="text" placeholder="Username" name="username" required>
+        </div>
+        <div class="input-group">
+            <input id="password" class="form-control" type="password" placeholder="Password" name="password" required>
+        </div>
+        <div class="input-group">
+            <input class="btn" class="form-control" name="submit" type="submit" value="Login">
         </div>
     </form>
 </div>
