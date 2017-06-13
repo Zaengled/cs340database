@@ -3,7 +3,7 @@
 <html lang="en">
 <!--Test change-->
 <head>
-	<meta charset="utf-8">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
     <meta name="description" content="">
@@ -17,7 +17,7 @@
     <!-- Custom CSS -->
     <link href="css/simple-sidebar.css" rel="stylesheet">
     <link href="css/modal.css" rel="stylesheet">
-	<link href="css/loginmodal.css" rel="stylesheet">
+    <link href="css/loginmodal.css" rel="stylesheet">
     <link href="css/climbOn.css" rel="stylesheet">
 
     <!-- Moment -->
@@ -33,24 +33,29 @@
 </head>
 
 <body>
-	
-	<div id="id01" class="modal">
-	  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
 
-	  <!-- Modal Content -->
-	  <form class="modal-content animate" action="login.php" method="POST">
+<div id="id01" class="modal">
+    <span onclick="document.getElementById('id01').style.display='none'" class="close"
+          title="Close Modal">&times;</span>
 
-		<div class="container">
-		  <label><b>Username</b></label>
-		  <input id="name" type="text" placeholder="Enter Username" name="username" required>
+    <!-- Modal Content -->
+    <form class="modal-content animate" action="login.php" method="POST">
 
-		  <label><b>Password</b></label>
-		  <input id="password" type="password" placeholder="Enter Password" name="password" required>
-
-		  <input name="submit" type="submit" value="Login">
-		</div>
-	  </form>
-	</div>
+        <div class="container">
+            <div class="input-group">
+                <label><b>Username</b></label>
+                <input id="name" type="text" placeholder="Enter Username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label><b>Password</b></label>
+                <input id="password" type="password" placeholder="Enter Password" name="password" required>
+            </div>
+            <div class="input-group">
+                <input class="btn" name="submit" type="submit" value="Login">
+            </div>
+        </div>
+    </form>
+</div>
 
 <div id="wrapper" class="active">
     <!-- Sidebar -->
@@ -78,18 +83,18 @@
         <div class="container-fluid page-content inset">
             <div class="content-header">
                 <h1>Climb On</h1>
-				<?php 
-					if($_SESSION["valid"] == true){
-						echo " Logged in as: " .$_SESSION["userName"];
-					}
-				?>
+                <?php
+                if ($_SESSION["valid"] == true) {
+                    echo " Logged in as: " . $_SESSION["userName"];
+                }
+                ?>
                 <div style="float:right">
-					<?php
-						if($_SESSION["valid"] == false){
-							echo "<a onclick=\"document.getElementById('id01').style.display='block'\">Login<span class=\"glyphicon glyphicon-log-in\"></span></a>";
-						} else {
-							echo "<a href=\"logout.php\">Logout<span class=\"glyphicon glyphicon-log-in\"></span></a>";
-						}
-					?>
-				</div>
+                    <?php
+                    if ($_SESSION["valid"] == false) {
+                        echo "<a onclick=\"document.getElementById('id01').style.display='block'\">Login<span class=\"glyphicon glyphicon-log-in\"></span></a>";
+                    } else {
+                        echo "<a href=\"logout.php\">Logout<span class=\"glyphicon glyphicon-log-in\"></span></a>";
+                    }
+                    ?>
+                </div>
             </div>
