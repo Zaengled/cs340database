@@ -34,23 +34,26 @@
 
 <body>
 
-<div id="id01" class="modal login">
+<div id="id01" class="modal">
     <span onclick="document.getElementById('id01').style.display='none'" class="close"
           title="Close Modal">&times;</span>
 
     <!-- Modal Content -->
-    <form class="modal-content animate" action="login.php" method="POST">
+    <div class="modal-content animate content">
+        <form class="login" action="login.php" method="POST">
 
-        <div class="input-group">
-            <input id="name" class="form-control" type="text" placeholder="Username" name="username" required>
-        </div>
-        <div class="input-group">
-            <input id="password" class="form-control" type="password" placeholder="Password" name="password" required>
-        </div>
-        <div class="input-group">
-            <input class="btn" class="form-control" name="submit" type="submit" value="Login">
-        </div>
-    </form>
+            <div class="input-group">
+                <input id="name" class="form-control" type="text" placeholder="Username" name="username" required>
+            </div>
+            <div class="input-group">
+                <input id="password" class="form-control" type="password" placeholder="Password" name="password"
+                       required>
+            </div>
+            <div class="input-group">
+                <input class="btn" class="form-control" name="submit" type="submit" value="Login">
+            </div>
+        </form>
+    </div>
 </div>
 
 <div id="wrapper" class="active">
