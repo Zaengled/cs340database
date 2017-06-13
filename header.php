@@ -59,15 +59,13 @@
 <div id="wrapper" class="active">
     <!-- Sidebar -->
     <div id="sidebar-wrapper">
-        <ul id="sidebar_menu" class="sidebar-nav">
+        <ul id="sidebar" class="sidebar-nav">
             <li class="sidebar-brand">
                 <a id="menu-toggle" href="#">
                     Menu
                     <span id="main_icon" class="glyphicon glyphicon-menu-hamburger"></span>
                 </a>
             </li>
-        </ul>
-        <ul class="sidebar-nav" id="sidebar">
             <li><a href="index.php">Home<span class="sub_icon glyphicon glyphicon-home"></span></a></li>
             <li><a href="gym_list.php">Gym<span class="sub_icon glyphicon glyphicon-map-marker"></span></a></li>
             <li><a href="site_list.php">Outdoor<span class="sub_icon glyphicon glyphicon-leaf"></span></a></li>
@@ -89,15 +87,15 @@
                 ?>
                 <div style="float:right">
                     <a class="btn btn-default" role="button"
-                        <?php
-                        if ($_SESSION["valid"] == false) {
-                            echo "onclick=\"document.getElementById('id01').style.display='block'\">";
-                            echo "Login <span class=\"glyphicon glyphicon-log-in\"</span>";
-                        } else {
-                            echo "href='logout.php>'";
-                            echo "Logout <span class=\"glyphicon glyphicon-log-out\"</span>";
-                        }
-                        ?>
+                    <?php
+                    if ($_SESSION["valid"] == false) {
+                        echo "onclick=\"document.getElementById('id01').style.display='block'\">";
+                        echo "Login <span class=\"glyphicon glyphicon-log-in\"</span>";
+                    } else {
+                        echo "href='logout.php>'";
+                        echo "Logout <span class=\"glyphicon glyphicon-log-out\"</span>";
+                    }
+                    ?>
 
                     </a>
                 </div>
