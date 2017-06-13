@@ -50,7 +50,7 @@
                        required>
             </div>
             <div class="form-group">
-                <input class="btn btn-primary" class="form-control" name="submit" type="submit" value="Login">
+                <input class="btn btn-block btn-primary" class="form-control" name="submit" type="submit" value="Login">
             </div>
         </form>
     </div>
