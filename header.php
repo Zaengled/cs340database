@@ -88,12 +88,17 @@
                 }
                 ?>
                 <div style="float:right">
-                    <?php
-                    if ($_SESSION["valid"] == false) {
-                        echo "<a onclick=\"document.getElementById('id01').style.display='block'\">Login<span class=\"glyphicon glyphicon-log-in\"></span></a>";
-                    } else {
-                        echo "<a href=\"logout.php\">Logout<span class=\"glyphicon glyphicon-log-in\"></span></a>";
-                    }
-                    ?>
+                    <a class="btn"
+                        <?php
+                        if ($_SESSION["valid"] == false) {
+                            echo "onclick=\"document.getElementById('id01').style.display='block'\"";
+                            echo "innerHTML='Login <span class=\"glyphicon glyphicon-log-in\"</span>'";
+                        } else {
+                            echo "href='logout.php'";
+                            echo "innerHTML='Logout <span class=\"glyphicon glyphicon-log-out\"</span>'";
+                        }
+                        ?>
+                    >
+                    </a>
                 </div>
             </div>
