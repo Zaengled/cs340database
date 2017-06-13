@@ -20,10 +20,10 @@ $result = mysqli_query($mysqli, $sql);
                             . $row["objid"] . "'>" . $row["name"]
                             . '<small style="float:right;" class="rating">'
                             . '<span class="glyphicon glyphicon-star"></span>'
-                            . '<?php echo $gym['rating']; ?>'
-                        . '</small>'
-                        . "</a>";
-                }
+                            . $row['rating']
+                            . '</small>'
+                            . "</a>";
+                    }
                 } else {
                     echo "<li>No results found</li>";
                 }
