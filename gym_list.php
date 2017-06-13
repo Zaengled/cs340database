@@ -9,7 +9,7 @@ $result = mysqli_query($mysqli, $sql);
 ?>
 <div class="panel panel-default">
     <div class="panel-heading">
-        <h1>Gym Locations</h1>
+        <h3>Gym Locations</h3>
     </div>
     <div class="panel-body">
         <ul class="list-group">
