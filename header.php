@@ -77,7 +77,7 @@
     <div id="page-content-wrapper">
         <div class="container-fluid page-content inset">
             <div class="content-header">
-                Climb On
+                <h1>Climb On</h1>
 				<?php 
 					if($_SESSION["valid"] == true){
 						echo " Logged in as: " .$_SESSION["userName"];
