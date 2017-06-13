@@ -23,17 +23,12 @@
     width: 80%; /* Could be more or less, depending on screen size */
 }
 
-/*!* The Close Button *!
+/* The Close Button */
 .close {
-    !* Position it in the top right corner outside of the modal *!
-    position: absolute;
-    right: 25px;
-    top: 0; 
-    color: #000;
-    font-size: 35px;
+    /* Position it in the top right corner outside of the modal */
     font-weight: bold;
     padding: 5px 10px;
-}*/
+}
 
 /* Close button on hover */
 .close:hover,
