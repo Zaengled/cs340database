@@ -24,7 +24,7 @@
 }
 
 /* The Close Button */
-.close-login {
+.close {
     /* Position it in the top right corner outside of the modal */
     position: absolute;
     right: 25px;
@@ -32,6 +32,7 @@
     color: #000;
     font-size: 35px;
     font-weight: bold;
+    margin:20px;
 }
 
 /* Close button on hover */
