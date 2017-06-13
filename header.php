@@ -34,7 +34,7 @@
 
 <body>
 
-<div id="id01" class="modal">
+<div id="id01" class="modal login">
     <span onclick="document.getElementById('id01').style.display='none'" class="close"
           title="Close Modal">&times;</span>
 
@@ -43,12 +43,10 @@
 
         <div class="container">
             <div class="input-group">
-                <label><b>Username</b></label>
-                <input id="name" class="form-control" type="text" placeholder="Enter Username" name="username" required>
+                <input id="name" class="form-control" type="text" placeholder="Username" name="username" required>
             </div>
             <div class="input-group">
-                <label><b>Password</b></label>
-                <input id="password" class="form-control" type="password" placeholder="Enter Password" name="password" required>
+                <input id="password" class="form-control" type="password" placeholder="Password" name="password" required>
             </div>
             <div class="input-group">
                 <input class="btn" class="form-control" name="submit" type="submit" value="Login">
