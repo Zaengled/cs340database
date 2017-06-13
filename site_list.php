@@ -16,7 +16,7 @@ $result = mysqli_query($mysqli, $sql);
             <?php
             if ($result->num_rows > 0) {
                 while($row = $result->fetch_assoc()) {
-                    echo "<a href='site_detail.php?objid=" .$row["objid"] ."'>"
+                    echo "<a class='list-group-item' href='site_detail.php?objid=" .$row["objid"] ."'>"
                         .$row["name"]
                         . '<small style="float:right;" class="rating">'
                         . '<span class="glyphicon glyphicon-star"></span> '
