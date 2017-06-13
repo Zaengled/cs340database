@@ -91,14 +91,14 @@
                     <a class="btn"
                         <?php
                         if ($_SESSION["valid"] == false) {
-                            echo "onclick=\"document.getElementById('id01').style.display='block'\"";
-                            echo "innerHTML='Login <span class=\"glyphicon glyphicon-log-in\"</span>'";
+                            echo "onclick=\"document.getElementById('id01').style.display='block'\">";
+                            echo "Login <span class=\"glyphicon glyphicon-log-in\"</span>";
                         } else {
-                            echo "href='logout.php'";
-                            echo "innerHTML='Logout <span class=\"glyphicon glyphicon-log-out\"</span>'";
+                            echo "href='logout.php>'";
+                            echo "Logout <span class=\"glyphicon glyphicon-log-out\"</span>";
                         }
                         ?>
-                    >
+
                     </a>
                 </div>
             </div>
