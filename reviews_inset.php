@@ -35,7 +35,7 @@
             echo "<span class=\"glyphicon glyphicon-plus-sign\"></span>";
             echo "</a>";
         } else {
-            echo '<a class="btn btn-link" role="button"'
+            echo '<a role="button"'
                 . "onclick=\"document.getElementById('id01').style.display='block'\">"
                 . "Login "
                 . "</a> to add a review!";
