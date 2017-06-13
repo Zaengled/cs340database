@@ -35,11 +35,12 @@
 <body>
 
 <div id="id01" class="modal">
-    <span onclick="document.getElementById('id01').style.display='none'" class="close"
-          title="Close Modal">&times;</span>
 
     <!-- Modal Content -->
     <div class="modal-content animate content">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                  title="Close Modal">&times;</span>
+
         <form class="login" action="login.php" method="POST">
             <div class="form-group">
                 <input id="name" class="form-control" type="text" placeholder="Username" name="username" required>
