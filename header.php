@@ -44,14 +44,14 @@
         <div class="container">
             <div class="input-group">
                 <label><b>Username</b></label>
-                <input id="name" type="text" placeholder="Enter Username" name="username" required>
+                <input id="name" class="form-control" type="text" placeholder="Enter Username" name="username" required>
             </div>
             <div class="input-group">
                 <label><b>Password</b></label>
-                <input id="password" type="password" placeholder="Enter Password" name="password" required>
+                <input id="password" class="form-control" type="password" placeholder="Enter Password" name="password" required>
             </div>
             <div class="input-group">
-                <input class="btn" name="submit" type="submit" value="Login">
+                <input class="btn" class="form-control" name="submit" type="submit" value="Login">
             </div>
         </div>
     </form>
