@@ -7,24 +7,24 @@ if (!$mysqli) {
 $sql = "SELECT * FROM `GymAndLocation`";
 $result = mysqli_query($mysqli, $sql);
 ?>
-<div class="row">
-    <div class="col-lg-12">
-        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Menu</a>
-        <h1>Climb On</h1>
-        <h2>Gym List</h2>
-        <table>
-        <?php
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h1>Gym Locations</h1>
+    </div>
+    <div class="panel-body">
+        <ul class="list-group">
+            <?php
             if ($result->num_rows > 0) {
                 while($row = $result->fetch_assoc()) {
-                    echo "<tr><td><a href='gym_detail.php?objid=" .$row["objid"] ."'>Name: ".$row["name"]."</a></td></tr>";
+                    echo "<a class='list-group-item' href='gym_detail.php?objid=" .$row["objid"] ."'>".$row["name"]."</a>";
                 }
             } else {
-                echo "<tr><td>0 results</td></tr>";
+                echo "<li>No results found</li>";
             }
-        ?>
-        </table>
-
+            ?>
+        </ul>
     </div>
 </div>
+
 
 <?php include 'footer.php' ?>
