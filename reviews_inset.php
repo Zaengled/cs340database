@@ -11,10 +11,10 @@
                 echo json_encode($row);
                 echo ")'>";
                 echo "<span class='stars'>";
-                for ($i = 1; $i <= 5; $i++){
-                    if ($i <= (int)$row["stars"]){
+                for ($i = 1; $i <= 5; $i++) {
+                    if ($i <= (int)$row["stars"]) {
                         echo "<span class='glyphicon glyphicon-star'></span>";
-                    }else{
+                    } else {
                         echo "<span class='glyphicon glyphicon-star-empty'></span>";
                     }
                 }
@@ -27,15 +27,21 @@
         }
         ?>
     </ul>
-	<?php 
-		if($_SESSION["valid"] == true){
-			echo '<div class="panel-footer">';
-			echo "<a href=\"submitreview.php?objid=" . $_GET['objid'] . "&userName=" . $_SESSION["userName"] . "&type=1\">";
+    <div class="panel-footer">
+        <?php
+        if ($_SESSION["valid"] == true) {
+            echo "<a href=\"submitreview.php?objid=" . $_GET['objid'] . "&userName=" . $_SESSION["userName"] . "&type=1\">";
             echo "Add Review ";
             echo "<span class=\"glyphicon glyphicon-plus-sign\"></span>";
-			echo "</a>";
-			echo '</div>';
+            echo "</a>";
+        } else {
+            echo 'Log in to add a review!'
+                . '<a class="btn btn-default" role="button"'
+                . "onclick=\"document.getElementById('id01').style.display='block'\">"
+                . "Login <span class=\"glyphicon glyphicon-log-in\"</span>"
+                . "</a>";
 		}
-	?>
-    
+        ?>
+    </div>
+
 </div>

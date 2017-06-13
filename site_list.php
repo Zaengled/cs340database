@@ -11,7 +11,6 @@ $result = mysqli_query($mysqli, $sql);
     <div class="panel-heading">
         <h3>Outdoor Sites</h3>
     </div>
-    <div class="panel-body">
         <ul class="list-group">
             <?php
             if ($result->num_rows > 0) {
@@ -29,7 +28,6 @@ $result = mysqli_query($mysqli, $sql);
             }
             ?>
         </ul>
-    </div>
 </div>
 
 
