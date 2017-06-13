@@ -27,10 +27,15 @@
         }
         ?>
     </ul>
-    <div class="panel-footer">
-        <a href="submitreview.php?objid=<?php echo $_GET['objid'] ?>&userName=<?php echo $_SESSION["userName"] ?>&type=1">
-            Add Review
-            <span class="glyphicon glyphicon-plus-sign"></span>
-        </a>
-    </div>
+	<?php 
+		if($_SESSION["valid"] == true){
+			echo '<div class="panel-footer">';
+			echo "<a href=\"submitreview.php?objid=" . $_GET['objid'] . "&userName=" . $_SESSION["userName"] . "&type=1\">";
+            echo "Add Review ";
+            echo "<span class=\"glyphicon glyphicon-plus-sign\"></span>";
+			echo "</a>";
+			echo '</div>';
+		}
+	?>
+    
 </div>
