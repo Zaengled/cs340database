@@ -28,7 +28,7 @@
         ?>
     </ul>
     <div class="panel-footer">
-        <a href="submitreview.php?objid=<?php echo $_GET['objid'] ?>&userName=Zaengru&type=1">
+        <a href="submitreview.php?objid=<?php echo $_GET['objid'] ?>&userName=<?php echo $_SESSION["userName"] ?>&type=1">
             Add Review
             <span class="glyphicon glyphicon-plus-sign"></span>
         </a>

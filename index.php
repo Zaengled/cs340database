@@ -31,7 +31,7 @@ if (!$mysqli) {
                 ?>
             </ul>
         </div>
-	<div class="panel panel-default">
+		<div class="panel panel-default">
             <div class="panel-heading">
                 Outdoor Sites
             </div>
