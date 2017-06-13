@@ -19,7 +19,7 @@ $result = mysqli_query($mysqli, $sql);
                         echo "<a style='text-transform:capitalize;' class='list-group-item' href='gym_detail.php?objid="
                             . $row["objid"] . "'>" . $row["name"]
                             . '<small style="float:right;" class="rating">'
-                            . '<span class="glyphicon glyphicon-star"></span>'
+                            . '<span class="glyphicon glyphicon-star"></span> '
                             . $row['rating']
                             . '</small>'
                             . "</a>";
