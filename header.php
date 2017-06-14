@@ -19,7 +19,25 @@
     <link href="css/modal.css" rel="stylesheet">
     <link href="css/loginmodal.css" rel="stylesheet">
     <link href="css/climbOn.css" rel="stylesheet">
-    
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <script>
+        function openModal(id, data) {
+            var modal = $('#' + id);
+            if (modal) {
+                modal.style.display = 'block';
+                var keys = Object.keys(data);
+                for (var i = 0; i < keys.length; i++) {
+                    $('#' + id + '_' + keys[i]).innerHTML = data[keys[i]];
+                }
+            }
+        }
+    </script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
