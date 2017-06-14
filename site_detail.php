@@ -17,8 +17,8 @@ if ($_GET["objid"]) {
 
     <div class="panel panel-default">
         <div class="panel-heading">
-            <h4 style="float:left;"><?php echo $location["name"]; ?></h4>
-            <span class='stars' style="float:right;">
+            <h4><?php echo $location["name"]; ?>
+                <span class='stars' style="float:right;">
             <?php
             echo "$location[stars] ";
             for ($i = 1; $i <= 5; $i++) {
@@ -29,6 +29,7 @@ if ($_GET["objid"]) {
                 }
             } ?>
         </span>
+            </h4>
         </div>
         <div class="panel-body">
             <p>
@@ -38,8 +39,8 @@ if ($_GET["objid"]) {
                 <span class="glyphicon glyphicon-home"></span>
                 <?php $address = "$location[address], $location[city], $location[state] $location[zip]";
                 echo "<a href='https://maps.google.com/?q=$address'>";
-                    echo "$address "; ?>
-                 <span class="glyphicon glyphicon-new-window"></span>
+                echo "$address "; ?>
+                <span class="glyphicon glyphicon-new-window"></span>
                 </a>
             </div>
         </div>
