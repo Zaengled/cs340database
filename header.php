@@ -28,6 +28,7 @@
 
     <script>
         function openModal(id, data) {
+            console.log(id, data);
             var modal = $('#' + id);
             if (modal) {
                 modal.css('display','block');
