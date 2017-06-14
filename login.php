@@ -7,6 +7,10 @@ if (!$mysqli) {
 $username = $_POST['username'];
 $password = $_POST['password'];
 
+if ($_POST['register']){
+    $mysqli->query("INSERT INTO USER (userName, password) VALUES($_POST[userName], $_POST[password])");
+}
+
 $sql = "SELECT * FROM `User` WHERE `userName` = '$username' AND `password` = '$password'";
 $result = mysqli_query($mysqli, $sql);
 if ($result->num_rows > 0) {

@@ -4,6 +4,7 @@ include 'connect.php';
 if (!$mysqli) {
     die('Could not connect: ' . mysqli_error());
 }
+
 ?>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 <script src="js/locationgrab.js"></script>

@@ -8,7 +8,7 @@
 <?php
 	$t = intval($_GET['t']);
 	$q = $_GET['q'];
-	
+	$_SESSION['location'] = $q;
 	if($t == 1){
 		
 		$sql1 = "SELECT * FROM `GymAndLocation` WHERE City = '".$q."'";

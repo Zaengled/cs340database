@@ -1,6 +1,6 @@
 <?php
 include 'header.php';
-
+include 'connect.php';
 $gyms = mysqli_query($mysqli, 'SELECT * FROM GYMS WHERE published = 0');
 $stores = mysqli_query($mysqli, 'SELECT * FROM STORES where published = 0');
 
