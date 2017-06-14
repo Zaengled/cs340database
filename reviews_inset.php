@@ -4,13 +4,13 @@
     <div class="modal-content">
         <div class="modal-header">
             <span class="close">&times;</span>
-            <h2 id="review_mh1">Modal Header</h2>
+            <h2 id="review_userName">Modal Header</h2>
         </div>
         <div class="modal-body">
-            <p id="review_cont">Some text in the Modal Body</p>
+            <p id="review_body">Some text in the Modal Body</p>
         </div>
         <div class="modal-footer">
-            <h3 id="review_mh2">Modal Footer</h3>
+            <h3 id="review_stars">Modal Footer</h3>
         </div>
     </div>
 </div>
