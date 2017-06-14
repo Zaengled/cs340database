@@ -17,7 +17,7 @@ if ($_GET["objid"]) {
 
     <div class="panel panel-default">
         <div class="panel-heading">
-            <h4><?php echo $location["name"]; ?></h4>
+            <h4 style="float:left;"><?php echo $location["name"]; ?></h4>
             <span class='stars' style="float:right;">
             <?php
             echo "$location[stars] ";
