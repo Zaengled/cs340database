@@ -20,9 +20,9 @@ if ($_GET["objid"]) {
             <h4><?php echo $location["name"]; ?>
                 <span class='stars' style="float:right;">
             <?php
-            echo "$location[stars] ";
+            echo "$location[rating] ";
             for ($i = 1; $i <= 5; $i++) {
-                if ($i <= $location['stars']) {
+                if ($i <= $location['rating']) {
                     echo "<span class='glyphicon glyphicon-star'></span>";
                 } else {
                     echo "<span class='glyphicon glyphicon-star-empty'></span>";
