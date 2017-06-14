@@ -1,6 +1,6 @@
 function closeModals(){
     console.log('Closing all modals');
-    $('modal').css('display', 'none');
+    $('.modal').css('display', 'none');
 }
 
 
