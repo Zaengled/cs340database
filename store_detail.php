@@ -25,23 +25,6 @@ if ($_GET["objid"]){
         ?>
         <?php include 'reviews_inset.php'?>
 
-        <!-- The Modal -->
-        <div id="myModal" class="modal">
-            <!-- Modal content -->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <span class="close">&times;</span>
-                    <h2 id="mh1">Modal Header</h2>
-                </div>
-                <div class="modal-body">
-                    <p id="cont">Some text in the Modal Body</p>
-                </div>
-                <div class="modal-footer">
-                    <h3 id="mh2">Modal Footer</h3>
-                </div>
-            </div>
-        </div>
-
     </div>
 </div>
 <?php include 'footer.php' ?>

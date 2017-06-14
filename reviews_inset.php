@@ -1,3 +1,21 @@
+<!-- The Modal -->
+<div id="review" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2 id="review_mh1">Modal Header</h2>
+        </div>
+        <div class="modal-body">
+            <p id="review_cont">Some text in the Modal Body</p>
+        </div>
+        <div class="modal-footer">
+            <h3 id="review_mh2">Modal Footer</h3>
+        </div>
+    </div>
+</div>
+
+
 <div class="panel panel-default">
     <div class="panel-heading">
         Reviews
@@ -7,7 +25,7 @@
         <?php
         if ($reviews->num_rows > 0) {
             while ($row = $reviews->fetch_assoc()) {
-                echo "<a class='list-group-item review' onclick='reviewModal(";
+                echo "<a class='list-group-item review' onclick='openModal(\"review\"";
                 echo json_encode($row);
                 echo ")'>";
                 echo "<span class='stars'>";

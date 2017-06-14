@@ -16,10 +16,10 @@ var closeButtons = document.getElementsByClassName("close");
  }*/
 
 // When the user clicks on <span> (x), close the modal
-for (var span in closeButtons) {
-    span.onclick = function () {
-        for (var modal in modals) {
-            modal.style.display = "none";
+for (var j = 0; j < closeButtons.length; j++) {
+    closeButtons[j].onclick = function () {
+        for (var i = 0; i < modals.length; i++) {
+            modals[i].style.display = "none";
         }
     }
 }
@@ -28,9 +28,24 @@ for (var span in closeButtons) {
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
     if (modals.indexOf(event.target) >= 0) {
-        modal.style.display = "none";
+        for (var i = 0; i < modals.length; i++){
+            modals[i].style.display = "none";
+        }
     }
 }
+
+function openModal(id, data){
+    var modal = $('#'+id);
+    if (modal){
+        modal.style.display = 'block';
+        var keys = Object.keys(data);
+        for(var i = 0; i < keys.length; i++){
+            $('#'+id+'_'+keys[i]).innerHTML = data[keys[i]];
+        }
+    }
+}
+
+/*
 
 //Modify the modal to include the review the user clicked
 function reviewModal(user) {
@@ -46,4 +61,4 @@ function routeModal(route) {
     document.getElementById("mh1").innerHTML = "Route ID: " + route["routeID"];
     document.getElementById("cont").innerHTML = route["bio"];
     document.getElementById("mh2").innerHTML = "Difficulty: " + route["difficulty"];
-}
+}*/
