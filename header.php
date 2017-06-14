@@ -38,8 +38,7 @@
 
     <!-- Modal Content -->
     <div class="modal-content animate content">
-        <span onclick="document.getElementById('id01').style.display='none'" class="close"
-              title="Close Modal">x</span>
+        <span class="close" title="Close Modal">x</span>
 
         <form class="login" action="login.php" method="POST">
             <div class="form-group">
