@@ -25,7 +25,7 @@
         <?php
         if ($reviews->num_rows > 0) {
             while ($row = $reviews->fetch_assoc()) {
-                echo "<a class='list-group-item review' onclick='openModal(\"review\"";
+                echo "<a class='list-group-item review' onclick='openModal(\"review\",";
                 echo json_encode($row);
                 echo ")'>";
                 echo "<span class='stars'>";
