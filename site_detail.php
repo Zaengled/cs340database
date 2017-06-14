@@ -7,7 +7,11 @@ if ($_GET["objid"]){
     $sql2 = "SELECT * FROM `Reviews` WHERE `objid` = ".$_GET["objid"];
     $reviews = mysqli_query($mysqli, $sql2);
     $sql3 = "SELECT * FROM `Route` WHERE `locationID` = ".$_GET["objid"];
-    $result3 = mysqli_query($mysqli, $sql3);
+    $routes = mysqli_query($mysqli, $sql3);
+	
+	if ($result->num_rows > 0) {
+        $location = $result->fetch_assoc();
+    }
 }
 ?>
 
@@ -16,35 +20,31 @@ if ($_GET["objid"]){
         <h1>Climb On</h1>
         <h2> SITE:
         <?php
-            if($result->num_rows > 0){
-                $row = $result->fetch_assoc();
-                echo " " . $row["name"] . "</h2>";
-                echo "About: " . $row["bio"] . "<br>";
-                echo "Address: " . $row["address"] . " " . $row["city"] . ", " . $row["state"] . " " . $row["zip"] . "<br>";
-                echo "Rating: " . $row["rating"];
-                }
+			echo " " . $location["name"] . "</h2>";
+			echo "About: " . $location["bio"] . "<br>";
+			echo "Address: " . $location["address"] . " " . $location["city"] . ", " . $location["state"] . " " . $location["zip"] . "<br>";
+			echo "Rating: " . $location["rating"];
         ?>
         <?php include 'reviews_inset.php'?>
 
-        <h2> ROUTES: </h2>
+        <?php include 'routes_inset.php'?>
 
-        <table width="80%">
-        <tr>
-            <th>Route Number</th>
-            <th>Difficulty</th>
-        </tr>
-        <?php
-            if($result3->num_rows > 0){
-                while($row = $result3->fetch_assoc()) {
-                    echo "<tr onclick='routeModal(";
-                    echo json_encode($row);
-                    echo ") '><td>" . $row["routeID"] . "</td><td>" . $row["difficulty"] . "</td></tr>";
-                }
-            } else {
-                echo "<tr><td>No routes yet!</td></tr>";
-            }
-        ?>
-        </table>
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h2 id="mh1">Modal Header</h2>
+                </div>
+                <div class="modal-body">
+                    <p id="cont">Some text in the Modal Body</p>
+                </div>
+                <div class="modal-footer">
+                    <h3 id="mh2">Modal Footer</h3>
+                </div>
+            </div>
+        </div>
 
     </div>
 </div>
