@@ -18,19 +18,21 @@ var closeButtons = document.getElementsByClassName("close");
 // When the user clicks on <span> (x), close the modal
 if (modals.length > 0) {
     if (spans && spans.length > 0) {
-        span.onclick = function () {
-            for(var modal in modals) {
-                modal.style.display = "none";
+        for (var span in spans) {
+            span.onclick = function () {
+                for (var modal in modals) {
+                    modal.style.display = "none";
+                }
             }
         }
     }
 
 // When the user clicks anywhere outside of the modal, close it
     window.onclick = function (event) {
-        if (modals.indexOf(event.target) >= 0){
+        if (modals.indexOf(event.target) >= 0) {
             modal.style.display = "none";
-        };
-    };
+        }
+    }
 
 //Modify the modal to include the review the user clicked
     function reviewModal(user) {
