@@ -19,14 +19,13 @@
         }
         ?>
     </ul>
+    <div class="panel-footer">
     <?php
     if ($_SESSION["valid"] == true) {
-        echo '<div class="panel-footer">';
         echo "<a href=\"submitroute.php?objid=" . $_GET['objid'] . "&type=" . $location['type'] . "\">";
         echo "Add Route ";
         echo "<span class=\"glyphicon glyphicon-plus-sign\"></span>";
         echo "</a>";
-        echo '</div>';
     } else {
         echo '<a role="button"'
             . "onclick=\"document.getElementById('id01').style.display='block'\">"
@@ -34,5 +33,6 @@
             . "</a> to add a route!";
     }
     ?>
+    </div>
 
 </div>
