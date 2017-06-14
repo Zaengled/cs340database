@@ -3,6 +3,7 @@ include 'header.php';
 ?>
 <h2>Create a new account</h2>
 <form id="register" action="login.php" method="POST">
+    <input type="hidden" name="register" value="true">
     <div class="form-group">
         <input type="text" name="username" class="form-control" placeholder="Username">
     </div>
