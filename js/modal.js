@@ -16,37 +16,34 @@ var closeButtons = document.getElementsByClassName("close");
  }*/
 
 // When the user clicks on <span> (x), close the modal
-if (modals.length > 0) {
-    if (spans && spans.length > 0) {
-        for (var span in spans) {
-            span.onclick = function () {
-                for (var modal in modals) {
-                    modal.style.display = "none";
-                }
-            }
-        }
-    }
-
-// When the user clicks anywhere outside of the modal, close it
-    window.onclick = function (event) {
-        if (modals.indexOf(event.target) >= 0) {
+for (var span in closeButtons) {
+    span.onclick = function () {
+        for (var modal in modals) {
             modal.style.display = "none";
         }
     }
+}
+
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+    if (modals.indexOf(event.target) >= 0) {
+        modal.style.display = "none";
+    }
+}
 
 //Modify the modal to include the review the user clicked
-    function reviewModal(user) {
-        modal.style.display = "block";
-        document.getElementById("mh1").innerHTML = user["userName"];
-        document.getElementById("cont").innerHTML = user["body"];
-        document.getElementById("mh2").innerHTML = "Stars: " + user["stars"];
-    }
+function reviewModal(user) {
+    modal.style.display = "block";
+    document.getElementById("mh1").innerHTML = user["userName"];
+    document.getElementById("cont").innerHTML = user["body"];
+    document.getElementById("mh2").innerHTML = "Stars: " + user["stars"];
+}
 
 //Modify the modal to include the route the user clicked
-    function routeModal(route) {
-        modal.style.display = "block";
-        document.getElementById("mh1").innerHTML = "Route ID: " + route["routeID"];
-        document.getElementById("cont").innerHTML = route["bio"];
-        document.getElementById("mh2").innerHTML = "Difficulty: " + route["difficulty"];
-    }
+function routeModal(route) {
+    modal.style.display = "block";
+    document.getElementById("mh1").innerHTML = "Route ID: " + route["routeID"];
+    document.getElementById("cont").innerHTML = route["bio"];
+    document.getElementById("mh2").innerHTML = "Difficulty: " + route["difficulty"];
 }
