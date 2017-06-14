@@ -1,3 +1,8 @@
+function closeModals(){
+    $('modal').css('display', 'none');
+}
+
+
 $('document').ready(
     function () {
 
@@ -6,13 +11,13 @@ $('document').ready(
 //var modal = document.getElementById('myModal');
 
 //Get modals
-        var modals = document.getElementsByClassName('modal');
+//         var modals = document.getElementsByClassName('modal');
 
 // Get the button that opens the modal
 //var btn = document.getElementById("myBtn");
 
 // Get the <span> elements that close the modals
-        var closeButtons = document.getElementsByClassName("close");
+//         var closeButtons = document.getElementsByClassName("close");
 
 // When the user clicks the button, open the modal 
         /*btn.onclick = function() {
@@ -20,23 +25,18 @@ $('document').ready(
          }*/
 
 // When the user clicks on <span> (x), close the modal
-        for (var j = 0; j < closeButtons.length; j++) {
-            closeButtons[j].onclick = function () {
-                for (var i = 0; i < modals.length; i++) {
-                    modals[i].style.display = "none";
-                }
-            }
-        }
+        $.each($('.close'), function(index, ele){
+            ele.click(closeModals)
+        });
 
 
-// When the user clicks anywhere outside of the modal, close it
-        window.onclick = function (event) {
-            if (modals.indexOf(event.target) >= 0) {
-                for (var i = 0; i < modals.length; i++) {
-                    modals[i].style.display = "none";
-                }
+        // When the user clicks anywhere outside of the modal, close it
+        $(window).click(function(e){
+            if(e.target.className.indexOf('modal')<0){
+                closeModals();
             }
-        }
+        })
+
 
 
 
