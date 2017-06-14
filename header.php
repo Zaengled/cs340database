@@ -52,7 +52,6 @@
 <body>
 
 <div id="id01" class="modal">
-
     <!-- Modal Content -->
     <div class="modal-content animate content">
         <span class="close" title="Close Modal">x</span>
@@ -67,6 +66,11 @@
             </div>
             <div class="form-group">
                 <input class="btn btn-block btn-primary" class="form-control" name="submit" type="submit" value="Login">
+            </div>
+            <div class="form-group">
+                <button class="btn btn-block btn-link" class="form-control">
+                    Don't have an account? Register
+                </button>
             </div>
         </form>
     </div>
