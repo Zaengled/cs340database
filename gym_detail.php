@@ -36,7 +36,7 @@ if ($_GET["objid"]) {
                     <div class="well" style="margin-bottom:0;">
                         <span class="glyphicon glyphicon-home"></span>
                         <?php $address = "$location[address], $location[city], $location[state] $location[zip]";
-                        echo "<a href='https://maps.google.com/?q=$address'>";
+                        echo "<a target='_blank' href='https://maps.google.com/?q=$address'>";
                         echo "$address "; ?>
                         <span class="glyphicon glyphicon-new-window"></span>
                         </a>
