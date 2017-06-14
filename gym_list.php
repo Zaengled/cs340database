@@ -1,9 +1,7 @@
 <?php include 'header.php' ?>
 <?php
 include 'connect.php';
-if (!$mysqli) {
-    die('Could not connect: ' . mysqli_error());
-}
+
 $sql = "SELECT * FROM `GymAndLocation`";
 $result = mysqli_query($mysqli, $sql);
 ?>

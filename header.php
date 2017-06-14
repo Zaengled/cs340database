@@ -87,6 +87,10 @@
             <li><a href="site_list.php">Outdoor<span class="sub_icon glyphicon glyphicon-leaf"></span></a></li>
             <li><a href="store_list.php">Store<span class="sub_icon glyphicon glyphicon-shopping-cart"></span></a></li>
             <li><a href="about.php">About<span class="sub_icon glyphicon glyphicon-info-sign"></span></a></li>
+            <?php if($_SESSION['admin']) {
+               echo '<li ><a href = "admin_list.php" > Admin<span class="sub_icon glyphicon glyphicon-cog" ></span ></a ></li>';
+            }
+            ?>
         </ul>
     </div>
     <!-- /#sidebar-wrapper -->
