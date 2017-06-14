@@ -11,7 +11,7 @@
                 echo json_encode($row);
                 echo ")'>";
                 echo "</span>";
-                echo "<span class='fill'>RouteID: " . $row["routeID"] . "</span>";
+                echo "<span class='fill'>Route #" . $row["routeID"] . "</span>";
                 echo "<span class='right'>Difficulty: " . $row["difficulty"] . "</span></a>";
             }
         } else {
