@@ -32,7 +32,7 @@ $('document').ready(
 
         // When the user clicks anywhere outside of the modal, close it
         $(window).click(function(e){
-            if(e.target.className.indexOf('modal')<0){
+            if(e.target.className.indexOf('modal')>=0){
                 closeModals();
             }
         })
