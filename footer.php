@@ -14,6 +14,9 @@
 <!-- Modal JavaScript -->
 <script src="js/modal.js"></script>
 
+<!-- Moment -->
+<script src="js/moment.min.js"></script>
+
 <!-- Custom JavaScript -->
 <script src="js/climbOn.js"></script>
 
