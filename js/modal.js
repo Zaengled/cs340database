@@ -1,4 +1,5 @@
 function closeModals(){
+    console.log('Closing all modals');
     $('modal').css('display', 'none');
 }
 
@@ -32,6 +33,7 @@ $('document').ready(
 
         // When the user clicks anywhere outside of the modal, close it
         $(window).click(function(e){
+            console.log("Clicked window", e);
             if(e.target.className.indexOf('modal')>=0){
                 closeModals();
             }
