@@ -1,6 +1,7 @@
 <?php
 include 'header.php';
 ?>
+<h2>Create a new account</h2>
 <form id="register">
     <div class="form-group">
         <input type="text" name="username" class="form-control" placeholder="Username">
