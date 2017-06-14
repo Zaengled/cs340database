@@ -2,7 +2,8 @@ function closeModals() {
     console.log('Closing all modals');
     $.each($('.modal'), function (i, v) {
         console.log(v);
-        v.css('display', 'none');
+        v.style.display = 'none'
+        //('display', 'none');
     })
 }
 
