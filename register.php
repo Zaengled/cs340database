@@ -13,7 +13,7 @@ include 'header.php';
         <input type="password_validate" name="password_validate" class="form-control" placeholder="Confirm Password">
     </div>
     <div class="form-group">
-        <input type="submit" name="submit" value="Register">
+        <input class="btn btn-primary btn-block" type="submit" name="submit" value="Register">
     </div>
 </form>
 <?php
