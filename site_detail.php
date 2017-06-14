@@ -31,9 +31,11 @@ if ($_GET["objid"]) {
         </span>
         </div>
         <div class="panel-body">
-            <?php echo $location['bio']; ?>
+            <p>
+                <?php echo $location['bio']; ?>
+            </p>
             <div class="well">
-                <h4>Address</h4>
+                <span class="glyphicon glyphicon-home"></span>
                 <?php echo "$location[address] $location[city], $location[state] $location[zip]"; ?>
             </div>
         </div>
