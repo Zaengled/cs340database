@@ -16,7 +16,7 @@ var closeButtons = document.getElementsByClassName("close");
  }*/
 
 // When the user clicks on <span> (x), close the modal
-if (modal) {
+if (modals.length > 0) {
     if (spans && spans.length > 0) {
         span.onclick = function () {
             for(var modal in modals) {
