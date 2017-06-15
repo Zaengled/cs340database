@@ -33,7 +33,7 @@ $result = mysqli_query($mysqli, $sql);
             if ($_SESSION['valid']==true){
                 echo "<a href='#'>Suggest a store <span class='glyphicon glyphicon-plus-sign'></span></a>";
             }else{
-                echo "<a href='#'>Login to suggest stores <span class='glypicon glyphicon-log-in'></span></a>";
+                echo "<a href='#'>Login to suggest stores <span class='glyphicon glyphicon-log-in'></span></a>";
             }
             ?>
         </div>
