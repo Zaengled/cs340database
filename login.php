@@ -7,7 +7,7 @@ if (!$mysqli) {
 $username = $_POST['username'];
 $password = $_POST['password'];
 
-if ($_POST['register']){
+if ($_POST['register']=='true'){
     $mysqli->query("INSERT INTO USER (userName, password) VALUES($_POST[userName], $_POST[password])");
 }
 
