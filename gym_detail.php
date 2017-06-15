@@ -1,7 +1,7 @@
 <?php include 'header.php' ?>
 
 <?php
-$location = array('name' => $_POST['title'], 'bio' => $_POST['gym_body'], 'publish' => 0);
+$location = array('name' => $_POST['title'], 'bio' => $_POST['gym_body'], 'published' => 0);
 echo 'POST:<br>';
 foreach ($_POST as $key => $value) {
     echo "Key: $key; Value: $value<br>";
