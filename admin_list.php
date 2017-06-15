@@ -20,6 +20,9 @@ if ($_SESSION['admin']) { ?>
                     . "<span class='glyphicon glyphicon-trash'></span></button>"
                     . "</a>";
             }
+            if ($gyms->num_rows <= 0){
+                echo "<li class='list-group-item'>No suggestions to moderate</li>";
+            }
             ?>
         </ul>
     </div>
@@ -36,6 +39,9 @@ if ($_SESSION['admin']) { ?>
                     . "<button style='float:right;' class='btn btn-default' title='Delete'>"
                     . "<span class='glyphicon glyphicon-trash'></span></button>"
                     . "</a>";
+            }
+            if ($stores->num_rows <= 0){
+                echo "<li class='list-group-item'>No suggestions to moderate</li>";
             }
             ?>
         </ul>
