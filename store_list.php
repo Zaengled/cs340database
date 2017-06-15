@@ -34,7 +34,7 @@ $result = mysqli_query($mysqli, $sql);
                 echo "<a href='#'>Suggest a store <span class='glyphicon glyphicon-plus-sign'></span></a>";
             }else{
                 echo "<a onclick=\"document.getElementById('id01').style.display='block'\">Login"
-                    ."</a> to suggest stores";
+                    ."</a> to suggest stores!";
             }
             ?>
         </div>
