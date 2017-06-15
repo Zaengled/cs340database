@@ -1,63 +1,66 @@
 <?php include 'header.php' ?>
 
 <?php
-$location=array('name' => $_POST['title'], 'bio' => $_POST['gym_body']);
+$location = array('name' => $_POST['title'], 'bio' => $_POST['gym_body']);
 echo 'POST:<br>';
 foreach ($_POST as $key => $value) {
     echo "Key: $key; Value: $value<br>";
 }
 echo '<br><br>';
 
-if(isset($_POST["fileToUpload"])){
+if (isset($_POST["fileToUpload"])) {
 
-$target_dir = "uploads/";
-$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
-$uploadOk = 1;
-$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
+    $target_dir = "uploads/";
+    $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+    $uploadOk = 1;
+    $imageFileType = pathinfo($target_file, PATHINFO_EXTENSION);
 
 // Check if image file is a actual image or fake image
-if(isset($_POST["submit"])) {
-    $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
-    if($check !== false) {
-        echo "File is an image - " . $check["mime"] . ".";
-        $uploadOk = 1;
-    } else {
-        echo "File is not an image.";
+    if (isset($_POST["submit"])) {
+        $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+        if ($check !== false) {
+            echo "File is an image - " . $check["mime"] . ".";
+            $uploadOk = 1;
+        } else {
+            echo "File is not an image.";
+            $uploadOk = 0;
+        }
+    }
+// Check if file already exists
+    if (file_exists($target_file)) {
+        echo "Sorry, file already exists.";
         $uploadOk = 0;
     }
-}
-// Check if file already exists
-if (file_exists($target_file)) {
-    echo "Sorry, file already exists.";
-    $uploadOk = 0;
-}
 // Check file size
-if ($_FILES["fileToUpload"]["size"] > 500000) {
-    echo "Sorry, your file is too large.";
-    $uploadOk = 0;
-}
+    if ($_FILES["fileToUpload"]["size"] > 500000) {
+        echo "Sorry, your file is too large.";
+        $uploadOk = 0;
+    }
 // Allow certain file formats
-if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
-    && $imageFileType != "gif" ) {
-    //echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
-    $uploadOk = 0;
-}
+    if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+        && $imageFileType != "gif"
+    ) {
+        //echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+        $uploadOk = 0;
+    }
 // Check if $uploadOk is set to 0 by an error
-if ($uploadOk == 0) {
-    //echo "Sorry, your file was not uploaded.";
+    if ($uploadOk == 0) {
+        //echo "Sorry, your file was not uploaded.";
 // if everything is ok, try to upload file
-} else {
-    if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-        //echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
-        $location['image']=$target_file;
     } else {
-        //echo "Sorry, there was an error uploading your file.";
+        if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+            //echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
+            $location['image'] = $target_file;
+        } else {
+            //echo "Sorry, there was an error uploading your file.";
+        }
     }
 }
-}
+include 'connect.php';
+
 if ($mysqli->query("INSERT INTO Gym (name, image, bio) VALUES('$location[name]','$location[image]','$location[bio]')")) {
     echo "SQL Query was successful";
-}else{
+} else {
     echo "SQL Query was unsuccessful";
 }
 foreach ($location as $key => $value) {
@@ -67,7 +70,6 @@ foreach ($location as $key => $value) {
 ?>
 
 <?php
-include 'connect.php';
 if ($_GET["objid"]) {
     $sql = "SELECT * FROM `GymAndLocation` WHERE `objid` = " . $_GET["objid"];
     $result = mysqli_query($mysqli, $sql);
@@ -97,16 +99,16 @@ if ($_GET["objid"]) {
                     </h2>
                 </div>
                 <div class="panel-body">
-					<table>
-						<tr>
-							<td id="imageslot" style="padding:15px;"></td>
-							<td>
-								<p>
-									<?php echo $location['bio']; ?>
-								</p>
-							</td>
-						</tr>
-					</table>
+                    <table>
+                        <tr>
+                            <td id="imageslot" style="padding:15px;"></td>
+                            <td>
+                                <p>
+                                    <?php echo $location['bio']; ?>
+                                </p>
+                            </td>
+                        </tr>
+                    </table>
                     <div class="well" style="margin-bottom:0;">
                         <span class="glyphicon glyphicon-home"></span>
                         <?php $address = "$location[address], $location[city], $location[state] $location[zip]";
@@ -124,13 +126,13 @@ if ($_GET["objid"]) {
 
         </div>
     </div>
-	<script>
-		$('document').ready(
-			function(){
-				if("<?php echo $location['image'];?>" != ""){
-					document.getElementById("imageslot").innerHTML = "<img style='border:1px solid black;' src='uploads/<?php echo $location['image']; ?>'>"
-				}
-			}
-		)
-	</script>
+    <script>
+        $('document').ready(
+            function () {
+                if ("<?php echo $location['image'];?>" != "") {
+                    document.getElementById("imageslot").innerHTML = "<img style='border:1px solid black;' src='uploads/<?php echo $location['image']; ?>'>"
+                }
+            }
+        )
+    </script>
 <?php include 'footer.php' ?>
