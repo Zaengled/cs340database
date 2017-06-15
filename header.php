@@ -110,17 +110,28 @@
                 }
                 ?>
                 <div style="float:right">
-                    <a class="btn btn-default" role="button"
                     <?php
                     if ($_SESSION["valid"] == false) {
+                        echo "<class='btn btn-default' role='button'";
                         echo "onclick=\"document.getElementById('id01').style.display='block'\">";
-                        echo "Login <span class=\"glyphicon glyphicon-log-in\"</span>";
+                        echo "Login <span class=\"glyphicon glyphicon-log-in\"</span></a>";
                     } else {
+                        echo "<div class='btn-group'>"
+                            ."<button type='button' class='btn btn-default'>$_SESSION[userName]</button>"
+                            ."<button type='button' class='btn btn-default dropdown-toggle' data-toggle='dropdown'>"
+                                ."<span class='carat'></span>"
+                                ."<span class='sr-only'>Toggle Dropdown</span>"
+                            ."</button>"
+                            ."<ul class='dropdown-menu'>"
+                                ."<li><a href='#'>Edit</a></li>"
+                                ."<li><a href='logout.php'>Logout</a></li>"
+                            ."</ul>"
+                            ."</div>";
+
                         echo "href='logout.php'>";
                         echo "Logout <span class=\"glyphicon glyphicon-log-out\"</span>";
                     }
                     ?>
 
-                    </a>
                 </div>
             </div>
