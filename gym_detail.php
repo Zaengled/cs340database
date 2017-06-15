@@ -8,11 +8,11 @@ $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 $location=array('name' => $_POST['title'], 'bio' => $_POST['gym_body']);
 
 foreach ($location as $key => $value) {
-    echo "Key: $key; Value: $value\n";
+    echo "Key: $key; Value: $value<br>";
 }
-
+echo '<br><br>';
 foreach ($_POST as $key => $value) {
-    echo "Key: $key; Value: $value\n";
+    echo "Key: $key; Value: $value<br>";
 }
 
 
