@@ -5,6 +5,18 @@ include 'connect.php';
 $sql = "SELECT * FROM `GymAndLocation`";
 $result = mysqli_query($mysqli, $sql);
 ?>
+    <div id="new_gym" class="modal">
+        <div class="modal-content">
+            <div class="modal-body">
+                <form action="gym_detail.php" method="post" enctype="multipart/form-data">
+                    Select image to upload:
+                    <input type="file" name="fileToUpload" id="fileToUpload">
+                    <input type="submit" value="Upload Image" name="submit">
+                </form>
+            </div>
+        </div>
+    </div>
+
     <div class="panel panel-default">
         <div class="panel-heading">
             <h3>Gyms</h3>
@@ -28,11 +40,13 @@ $result = mysqli_query($mysqli, $sql);
         </ul>
         <div class="panel-footer">
             <?php
-            if ($_SESSION['valid']==true){
-                echo "<a href='#'>Suggest a gym <span class='glyphicon glyphicon-plus-sign'></span></a>";
-            }else{
+            if ($_SESSION['valid'] == true) {
+                echo "<a"
+                    . "onclick=\"document.getElementById('new_gym').style.display='block'\""
+                    .">Suggest a gym <span class='glyphicon glyphicon-plus-sign'></span></a>";
+            } else {
                 echo "<a onclick=\"document.getElementById('id01').style.display='block'\">Login"
-                    ."</a> to suggest gyms!";
+                    . "</a> to suggest gyms!";
             }
             ?>
         </div>
