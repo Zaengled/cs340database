@@ -26,6 +26,16 @@ $result = mysqli_query($mysqli, $sql);
             }
             ?>
         </ul>
+        <div class="panel-footer">
+            <?php
+            if ($_SESSION['valid']==true){
+                echo "<a href='#'>Suggest a gym <span class='glyphicon glyphicon-plus-sign'></span></a>";
+            }else{
+                echo "<a onclick=\"document.getElementById('id01').style.display='block'\">Login"
+                    ."</a> to suggest gyms!";
+            }
+            ?>
+        </div>
     </div>
 
 
