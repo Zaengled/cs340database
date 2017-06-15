@@ -28,6 +28,15 @@ $result = mysqli_query($mysqli, $sql);
             }
             ?>
         </ul>
+        <div class="panel-footer">
+            <?php
+            if ($_SESSION['valid']==true){
+                echo "<a href='#'>Suggest a store <span class='glyphicon glyphicon-plus-sign'></span></a>";
+            }else{
+                echo "<a href='#'>Login to suggest stores <span class='glypicon glyphicon-log-in'></span></a>";
+            }
+            ?>
+        </div>
     </div>
 
 <?php include 'footer.php' ?>
