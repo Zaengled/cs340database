@@ -118,7 +118,8 @@
                     } else {
                         echo "<div class='btn-group'>"
                             ."<button type='button' class='btn btn-default'>$_SESSION[userName]</button>"
-                            ."<button type='button' class='btn btn-default dropdown-toggle' data-toggle='dropdown'>"
+                            ."<button type='button' class='btn btn-default dropdown-toggle' data-toggle='dropdown'"
+                                ."aria-haspopup='true' aria-expanded='false'>"
                                 ."<span class='carat'></span>"
                                 ."<span class='sr-only'>Toggle Dropdown</span>"
                             ."</button>"
@@ -127,9 +128,6 @@
                                 ."<li><a href='logout.php'>Logout</a></li>"
                             ."</ul>"
                             ."</div>";
-
-                        echo "href='logout.php'>";
-                        echo "Logout <span class=\"glyphicon glyphicon-log-out\"</span>";
                     }
                     ?>
 
