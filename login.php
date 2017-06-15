@@ -8,7 +8,7 @@ $username = $_POST['username'];
 $password = $_POST['password'];
 
 if ($_POST['register']=='true'){
-    $mysqli->query("INSERT INTO User (userName, password) VALUES('$_POST[userName]', '$_POST[password]')");
+    $mysqli->query("INSERT INTO User (userName, password) VALUES('$_POST[username]', '$_POST[password]')");
 }
 
 $sql = "SELECT * FROM `User` WHERE `userName` = '$username' AND `password` = '$password'";
