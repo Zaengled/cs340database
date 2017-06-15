@@ -20,7 +20,7 @@ if ($result->num_rows > 0) {
     $_SESSION["bio"] = $row["bio"];
     $_SESSION["skill"] = $row["skill"];
     $_SESSION["admin"] = mysqli_query($mysqli,
-            "SELECT * FROM `ADMIN` WHERE userName=$row[userName]")->num_rows > 0;
+            "SELECT * FROM Admin WHERE userName='$row[userName]'")->num_rows > 0;
 } else {
     session_destroy();
 }
