@@ -13,10 +13,12 @@ $result = mysqli_query($mysqli, $sql);
             <div class="modal-body">
                 <form action="gym_detail.php" method="post" enctype="multipart/form-data">
                     <div class="form-group">
+                        <label for="gym_name">Name</label>
                         <input type="text" class="form-control" id="title" placeholder="Name">
                     </div>
                     <div class="form-group">
-                        <textarea class="form-control" id="body">Add a description</textarea>
+                        <label for="gym_body">Body</label>
+                        <textarea class="form-control" id="gym_body">Add a description</textarea>
                     </div>
                     <div class="form-group">
                         <label for="gym_image">Gym Image</label>
