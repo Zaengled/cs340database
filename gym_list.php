@@ -7,6 +7,9 @@ $result = mysqli_query($mysqli, $sql);
 ?>
     <div id="new_gym" class="modal">
         <div class="modal-content">
+            <div class="modal-header">
+                <h4>Suggest a Gym</h4>
+            </div>
             <div class="modal-body">
                 <form action="gym_detail.php" method="post" enctype="multipart/form-data">
                     <div class="form-group">
@@ -21,7 +24,7 @@ $result = mysqli_query($mysqli, $sql);
                         <label for="gym_image">Gym Image</label>
                         <input type="file" name="fileToUpload" id="gym_image">
                     </div>
-                    <button class="btn btn-default" type="submit">Submit</button>
+                    <button class="btn btn-primary" type="submit">Submit</button>
                 </form>
             </div>
         </div>
