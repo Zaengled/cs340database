@@ -13,7 +13,7 @@ if ($_SESSION['admin']) { ?>
         <ul class="list-group">
             <?php
             foreach ($gyms as $gym) {
-                echo "<a class='list-group-item' href='gym_detail.php?objid=$gym[gymID]'>$gym[name]"
+                echo "<a class='list-group-item clearfix' href='gym_detail.php?objid=$gym[gymID]'>$gym[name]"
                     . "<div style='float:right;' class='btn-group' role='group'>"
                     . "<button class='btn btn-default' title='Publish'>"
                     . "<span class='glyphicon glyphicon-ok'></span></button>"
