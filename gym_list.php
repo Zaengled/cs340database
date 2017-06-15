@@ -27,6 +27,7 @@ $result = mysqli_query($mysqli, $sql);
                     <button class="btn btn-primary" type="submit">Submit</button>
                 </form>
             </div>
+            <div class="modal-footer"></div>
         </div>
     </div>
 
