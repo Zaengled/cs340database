@@ -7,13 +7,11 @@ $uploadOk = 1;
 $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 $location=array('name' => $_POST['title'], 'bio' => $_POST['gym_body']);
 
-foreach ($location as $key => $value) {
-    echo "Key: $key; Value: $value<br>";
-}
-echo '<br><br>';
+
 foreach ($_POST as $key => $value) {
     echo "Key: $key; Value: $value<br>";
 }
+echo '<br><br>';
 
 
 // Check if image file is a actual image or fake image
@@ -60,6 +58,10 @@ if ($mysqli->query("INSERT INTO Gym (name, image, bio) VALUES('$location[name]',
 }else{
     echo "SQL Query was unsuccessful";
 }
+foreach ($location as $key => $value) {
+    echo "Key: $key; Value: $value<br>";
+}
+
 ?>
 
 <?php
