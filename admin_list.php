@@ -14,15 +14,16 @@ if ($_SESSION['admin']) { ?>
             <?php
             foreach ($gyms as $gym) {
                 echo "<a class='list-group-item' href='gym_detail.php?objid=$gym[objid]'>$gym[name]"
-                    ."<div style='float:right;' class='btn-group' role='group'>"
+                    . "<div style='float:right;' class='btn-group' role='group'>"
                     . "<button class='btn btn-default' title='Publish'>"
-                        . "<span class='glyphicon glyphicon-ok'></span></button>"
+                    . "<span class='glyphicon glyphicon-ok'></span></button>"
                     . "<button class='btn btn-default' title='Delete'>"
-                        . "<span class='glyphicon glyphicon-trash'></span></button>"
-                    . "</a>"
-                    . "</div>";
+                    . "<span class='glyphicon glyphicon-trash'></span></button>"
+                    . "</div>"
+                    . "</a>";
+
             }
-            if ($gyms->num_rows <= 0){
+            if ($gyms->num_rows <= 0) {
                 echo "<li class='list-group-item'>No suggestions to moderate</li>";
             }
             ?>
@@ -42,7 +43,7 @@ if ($_SESSION['admin']) { ?>
                     . "<span class='glyphicon glyphicon-trash'></span></button>"
                     . "</a>";
             }
-            if ($stores->num_rows <= 0){
+            if ($stores->num_rows <= 0) {
                 echo "<li class='list-group-item'>No suggestions to moderate</li>";
             }
             ?>
