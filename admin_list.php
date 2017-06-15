@@ -14,11 +14,13 @@ if ($_SESSION['admin']) { ?>
             <?php
             foreach ($gyms as $gym) {
                 echo "<a class='list-group-item' href='gym_detail.php?objid=$gym[objid]'>$gym[name]"
+                    ."<div class='btn-group' role='group'>"
                     . "<button style='float:right;' class='btn btn-default' title='Publish'>"
-                    . "<span class='glyphicon glyphicon-ok'></span></button>"
+                        . "<span class='glyphicon glyphicon-ok'></span></button>"
                     . "<button style='float:right;' class='btn btn-default' title='Delete'>"
-                    . "<span class='glyphicon glyphicon-trash'></span></button>"
-                    . "</a>";
+                        . "<span class='glyphicon glyphicon-trash'></span></button>"
+                    . "</a>"
+                    . "</div>";
             }
             if ($gyms->num_rows <= 0){
                 echo "<li class='list-group-item'>No suggestions to moderate</li>";
