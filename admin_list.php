@@ -14,7 +14,7 @@ if ($_SESSION['admin']) { ?>
             <?php
             foreach ($gyms as $gym) {
                 echo "<a class='list-group-item' href='gym_detail.php?objid=$gym[objid]'>$gym[name]"
-                    ."<div class='btn-group' role='group'>"
+                    ."<div style='float:right;' class='btn-group' role='group'>"
                     . "<button class='btn btn-default' title='Publish'>"
                         . "<span class='glyphicon glyphicon-ok'></span></button>"
                     . "<button class='btn btn-default' title='Delete'>"
