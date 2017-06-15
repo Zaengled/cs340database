@@ -125,6 +125,7 @@
                             ."</button>"
                             ."<ul class='dropdown-menu'>"
                                 ."<li><a href='#'>Edit</a></li>"
+                                ."<li role='seperator' class='divider'></li>"
                                 ."<li><a href='logout.php'>Logout</a></li>"
                             ."</ul>"
                             ."</div>";
