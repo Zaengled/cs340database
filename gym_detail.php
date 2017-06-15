@@ -1,18 +1,19 @@
 <?php include 'header.php' ?>
 
 <?php
-$target_dir = "uploads/";
-$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
-$uploadOk = 1;
-$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 $location=array('name' => $_POST['title'], 'bio' => $_POST['gym_body']);
-
 
 foreach ($_POST as $key => $value) {
     echo "Key: $key; Value: $value<br>";
 }
 echo '<br><br>';
 
+if(isset($_POST["fileToUpload"])){
+
+$target_dir = "uploads/";
+$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+$uploadOk = 1;
+$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 
 // Check if image file is a actual image or fake image
 if(isset($_POST["submit"])) {
@@ -52,6 +53,7 @@ if ($uploadOk == 0) {
     } else {
         //echo "Sorry, there was an error uploading your file.";
     }
+}
 }
 if ($mysqli->query("INSERT INTO Gym (name, image, bio) VALUES('$location[name]','$location[image]','$location[bio]')")) {
     echo "SQL Query was successful";
