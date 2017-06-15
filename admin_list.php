@@ -48,7 +48,7 @@ if ($_SESSION['admin']) { ?>
                     . "<p>$gym[bio]</p>"
                     . "</li>";
             }
-            if ($gyms->num_rows <= 0) {
+            if ($stores->num_rows <= 0) {
                 echo "<li class='list-group-item'>No suggestions to moderate</li>";
             }
             ?>
