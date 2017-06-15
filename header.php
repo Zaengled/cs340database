@@ -120,7 +120,7 @@
                             ."<button type='button' class='btn btn-default'>$_SESSION[userName]</button>"
                             ."<button type='button' class='btn btn-default dropdown-toggle' data-toggle='dropdown'"
                                 ."aria-haspopup='true' aria-expanded='false'>"
-                                ."<span class='carat'></span>"
+                                ."<span class='caret'></span>"
                                 ."<span class='sr-only'>Toggle Dropdown</span>"
                             ."</button>"
                             ."<ul class='dropdown-menu'>"
