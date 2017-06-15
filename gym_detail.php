@@ -63,6 +63,7 @@ if ($mysqli->query("INSERT INTO Gym (name, image, bio) VALUES('$location[name]',
 } else {
     echo "SQL Query was unsuccessful";
 }
+echo "<br>";
 foreach ($location as $key => $value) {
     echo "Key: $key; Value: $value<br>";
 }
