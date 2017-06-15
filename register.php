@@ -11,7 +11,7 @@ include 'header.php';
         <input type="password" name="password" class="form-control" placeholder="Password">
     </div>
     <div class="form-group">
-        <input type="password_validate" name="password_validate" class="form-control" placeholder="Confirm Password">
+        <input type="password" name="password_validate" class="form-control" placeholder="Confirm Password">
     </div>
     <div class="form-group">
         <input class="btn btn-primary btn-block" type="submit" name="submit" value="Register">
