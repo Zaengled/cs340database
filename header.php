@@ -116,7 +116,7 @@
                         echo "onclick=\"document.getElementById('id01').style.display='block'\">";
                         echo "Login <span class=\"glyphicon glyphicon-log-in\"</span>";
                     } else {
-                        echo "href='logout.php>'";
+                        echo "href='logout.php'>";
                         echo "Logout <span class=\"glyphicon glyphicon-log-out\"</span>";
                     }
                     ?>
