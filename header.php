@@ -104,11 +104,6 @@
         <div class="container-fluid page-content inset">
             <div class="content-header">
                 <h1>Climb On</h1>
-                <?php
-                if ($_SESSION["valid"] == true) {
-                    echo " Logged in as: " . $_SESSION["userName"];
-                }
-                ?>
                 <div style="float:right">
                     <?php
                     if ($_SESSION["valid"] == false) {
