@@ -16,8 +16,8 @@ $result = mysqli_query($mysqli, $sql);
                         <input type="text" class="form-control" id="title" placeholder="Name">
                     </div>
                     <div class="form-group">
-                        <textarea class="form-control" id="body" placeholder="Description">
-
+                        <textarea class="form-control" id="body">
+                            Add a description
                         </textarea>
                     </div>
                     <div class="form-group">
