@@ -15,7 +15,6 @@
 
 <div class="row">
     <div class="col-lg-12">
-		<h1>Climb On</h1>
 		<h2>
 		<?php 
 			if($result->num_rows > 0){
@@ -24,7 +23,7 @@
 			}
 			echo "</h2>";
 		?>
-		<form method="post">
+		<form action="route_upload.php" method="post" enctype="multipart/form-data">
 			<fieldset>
 			<legend>New Route:</legend>
 			<h4>Route Description:
@@ -37,11 +36,15 @@
 				<textarea name="difficulty" rows="1" cols="6" required = "true" placeholder="Enter a difficulty."></textarea>
 				</p>
 			</h4>
-			<button type="submit" name="submityes" value="Submit">Submit</button>
+			
+			<h4>Select image to upload:</h4>
+			<input type="file" name="fileToUpload" id="fileToUpload">
+			<button type="submit" name="submit" value="Submit">Submit</button>
+			<input type="hidden" name="objid" value="<?php echo $_GET['objid']; ?>">
 			</fieldset>
 		</form>
     </div>
-	<?php 
+	<?php /* CURRENTLY NOT IN USE
 	if($_POST['submityes'] == "Submit"){
 		$OBJID = $_GET['objid'];
 		$CONTENT = $_POST['description'];
@@ -49,7 +52,7 @@
 		if($OBJID != NULL && $CONTENT != NULL && $DIFFICULTY != NULL){
 			$result = $mysqli->query("INSERT INTO `Route` (`locationID`, `bio`, `difficulty`) VALUES ('$OBJID', '$CONTENT', '$DIFFICULTY')");
 		}
-	}
+	}*/
 	?>
 </div>
 <?php include 'footer.php' ?>
