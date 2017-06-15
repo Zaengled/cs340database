@@ -50,7 +50,11 @@ if ($uploadOk == 0) {
         //echo "Sorry, there was an error uploading your file.";
     }
 }
-$mysqli->query("INSERT INTO Gym (name, image, bio) VALUES('$location[name]','$location[image]','$location[bio]')");
+if ($mysqli->query("INSERT INTO Gym (name, image, bio) VALUES('$location[name]','$location[image]','$location[bio]')")) {
+    echo "SQL Query was successful";
+}else{
+    echo "SQL Query was unsuccessful";
+}
 ?>
 
 <?php
