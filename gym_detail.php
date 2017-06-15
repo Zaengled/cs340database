@@ -30,9 +30,16 @@ if ($_GET["objid"]) {
                     </h2>
                 </div>
                 <div class="panel-body">
-                    <p>
-                        <?php echo $location['bio']; ?>
-                    </p>
+					<table>
+						<tr>
+							<td id="imageslot" style="padding:15px;"></td>
+							<td>
+								<p>
+									<?php echo $location['bio']; ?>
+								</p>
+							</td>
+						</tr>
+					</table>
                     <div class="well" style="margin-bottom:0;">
                         <span class="glyphicon glyphicon-home"></span>
                         <?php $address = "$location[address], $location[city], $location[state] $location[zip]";
@@ -50,4 +57,13 @@ if ($_GET["objid"]) {
 
         </div>
     </div>
+	<script>
+		$('document').ready(
+			function(){
+				if("<?php echo $location['image'];?>" != ""){
+					document.getElementById("imageslot").innerHTML = "<img style='border:1px solid black;' src='uploads/<?php echo $location['image']; ?>'>"
+				}
+			}
+		)
+	</script>
 <?php include 'footer.php' ?>
