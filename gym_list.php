@@ -9,9 +9,19 @@ $result = mysqli_query($mysqli, $sql);
         <div class="modal-content">
             <div class="modal-body">
                 <form action="gym_detail.php" method="post" enctype="multipart/form-data">
-                    Select image to upload:
-                    <input type="file" name="fileToUpload" id="fileToUpload">
-                    <input type="submit" value="Upload Image" name="submit">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="title" placeholder="Name">
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" id="body" placeholder="Description">
+
+                        </textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="gym_image">Gym Image</label>
+                        <input type="file" name="fileToUpload" id="gym_image">
+                    </div>
+                    <button class="btn btn-default" type="submit">Submit</button>
                 </form>
             </div>
         </div>
