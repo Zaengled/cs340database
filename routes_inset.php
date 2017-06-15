@@ -62,6 +62,8 @@
 			document.getElementById("route_number").innerHTML = "Route ID: " + info["routeID"];
 			if(info["image"] != null){
 				document.getElementById("image_box").innerHTML = "<img src=uploads/" +info["image"]+">";
+			} else {
+				document.getElementById("image_box").innerHTML = "";
 			}
 			document.getElementById("route_body").innerHTML = info["bio"];
 			document.getElementById("route_difficulty").innerHTML = "Difficulty: " + info["difficulty"];
