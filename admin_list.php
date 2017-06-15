@@ -1,8 +1,8 @@
 <?php
 include 'header.php';
 include 'connect.php';
-$gyms = mysqli_query($mysqli, 'SELECT * FROM GymAndLocation WHERE published = "0"');
-$stores = mysqli_query($mysqli, 'SELECT * FROM StoreAndLocation where published = "0"');
+$gyms = mysqli_query($mysqli, 'SELECT * FROM Gym WHERE published = "0"');
+$stores = mysqli_query($mysqli, 'SELECT * FROM Store where published = "0"');
 
 if ($_SESSION['admin']) { ?>
     <h2>Admin Console</h2>
@@ -13,7 +13,7 @@ if ($_SESSION['admin']) { ?>
         <ul class="list-group">
             <?php
             foreach ($gyms as $gym) {
-                echo "<a class='list-group-item' href='gym_detail.php?objid=$gym[objid]'>$gym[name]"
+                echo "<a class='list-group-item' href='gym_detail.php?objid=$gym[gymID]'>$gym[name]"
                     . "<div style='float:right;' class='btn-group' role='group'>"
                     . "<button class='btn btn-default' title='Publish'>"
                     . "<span class='glyphicon glyphicon-ok'></span></button>"
@@ -36,7 +36,7 @@ if ($_SESSION['admin']) { ?>
         <ul class="list-group">
             <?php
             foreach ($stores as $store) {
-                echo "<a class='list-group-item' href='gym_detail.php?objid=$store[objid]>$store[name]"
+                echo "<a class='list-group-item' href='gym_detail.php?objid=$store[storeID]>$store[name]"
                     . "<button style='float:right;' class='btn btn-default' title='Publish'>"
                     . "<span class='glyphicon glyphicon-ok'></span></button>"
                     . "<button style='float:right;' class='btn btn-default' title='Delete'>"
