@@ -2,7 +2,7 @@
 
 <?php
 $location=array('name' => $_POST['title'], 'bio' => $_POST['gym_body']);
-
+echo 'POST:<br>';
 foreach ($_POST as $key => $value) {
     echo "Key: $key; Value: $value<br>";
 }
