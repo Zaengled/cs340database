@@ -14,11 +14,11 @@ $result = mysqli_query($mysqli, $sql);
                 <form action="gym_detail.php" method="post" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="gym_name">Name</label>
-                        <input type="text" class="form-control" id="title" placeholder="Name">
+                        <input type="text" class="form-control" name="title" placeholder="Name">
                     </div>
                     <div class="form-group">
                         <label for="gym_body">Body</label>
-                        <textarea class="form-control" id="gym_body">Add a description</textarea>
+                        <textarea class="form-control" name="gym_body">Add a description</textarea>
                     </div>
                     <div class="form-group">
                         <label for="gym_image">Gym Image</label>
