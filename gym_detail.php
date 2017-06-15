@@ -11,6 +11,11 @@ foreach ($location as $key => $value) {
     echo "Key: $key; Value: $value\n";
 }
 
+foreach ($_POST as $key => $value) {
+    echo "Key: $key; Value: $value\n";
+}
+
+
 // Check if image file is a actual image or fake image
 if(isset($_POST["submit"])) {
     $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
