@@ -8,7 +8,7 @@ $sql = "SELECT * FROM `SiteAndLocation`";
 $result = mysqli_query($mysqli, $sql);
 ?>
 
-    <div id="new_store" class="modal">
+    <div id="new_site" class="modal">
         <div class="modal-content">
             <div class="modal-header">
                 <h4>Add a Site</h4>
@@ -95,7 +95,9 @@ $result = mysqli_query($mysqli, $sql);
         <div class="panel-footer">
             <?php
             if ($_SESSION['valid']==true){
-                echo "<a href='#'>Add a site <span class='glyphicon glyphicon-plus-sign'></span></a>";
+                echo "<a href='#'"
+                    ."onclick=\"document.getElementById('new_store').style.display = 'block'\""
+                    .">Add a site <span class='glyphicon glyphicon-plus-sign'></span></a>";
             }else{
                 echo "<a onclick=\"document.getElementById('id01').style.display='block'\">Login"
                     ."</a> to add locations!";
