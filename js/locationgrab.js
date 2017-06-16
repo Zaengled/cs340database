@@ -1,8 +1,26 @@
 var myCity;
 
-function grabResults(){
-	
+function getCurrentCity(){
+	if (navigator.geolocation){
+		var input = navigator.geolocation.getCurrentPosition();
+		var latlng = { lat: input.coords.latitude, lng: input.coords.longitude };
+		geocoder.geocode({'location': latlng}, function(results, status){
+			if (status==='OK'){
+				if(results[1]){
+					grabResults( results[1].split(',')[0] );
+				}
+			}
+		})
+    }else{
+		document.getElementById('current_loc').setAttribute('disabled', 'disabled');
+	}
+}
+
+function grabResults( city ){
+
+	if(!city){
 	myCity = document.getElementById("city").value;
+	}
 	myCity = myCity.replace(/[^0-9a-z]/gi, '');
 	//document.getElementById("enterC").innerHTML = "In " + myCity+"!";
 	

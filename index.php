@@ -10,10 +10,10 @@ if (!$mysqli) {
 <script src="js/locationgrab.js"></script>
 <div class="row" style="margin-top:10px; margin-bottom:10px;">
     <div class="col-md-6 col-md-offset-3">
-        <form action='#' onsubmit="grabResults()">
+        <form action='#' onsubmit="grabResults(null)">
             <div class="input-group">
                     <span class="input-group-btn">
-                        <button class="btn btn-default">
+                        <button id="current_loc" class="btn btn-default">
                             <span class="glyphicon glyphicon-screenshot"></span>
                         </button>
                     </span>
