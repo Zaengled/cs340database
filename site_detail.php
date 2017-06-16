@@ -17,7 +17,7 @@ if ($_GET["objid"]) {
     <div class="row">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h4><?php echo $location["name"]; ?>
+                <h4><?php echo htmlspecialchars($location["name"]); ?>
                     <span class='stars' style="float:right;">
                 <?php echo "$location[rating] "; ?>
                         <span class="glyphicon glyphicon-star"></span>
@@ -36,7 +36,7 @@ if ($_GET["objid"]) {
             </div>
             <div class="row well" style="margin-bottom:0;">
                 <span class="glyphicon glyphicon-home"></span>
-                <?php $address = "$location[address], $location[city], $location[state] $location[zip]";
+                <?php $address = htmlspecialchars("$location[address], $location[city], $location[state] $location[zip]");
                 echo "<a target='_blank' href='https://maps.google.com/?q=$address'>";
                 echo "$address "; ?>
                 <span class="glyphicon glyphicon-new-window"></span>
