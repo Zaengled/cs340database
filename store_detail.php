@@ -23,7 +23,7 @@ if ($_GET["objid"]) {
         <div class="panel panel-default"> <!--Gym info panel-->
             <div class="panel-heading">
                 <h2>
-                    <?php echo $location['name']; ?>
+                    <?php echo htmlspecialchars($location['name']); ?>
                     <small style="float:right;" class="rating">
                         <span class="glyphicon glyphicon-star"></span>
                         <?php echo $location['rating']; ?>
@@ -36,7 +36,7 @@ if ($_GET["objid"]) {
                 </div>
                 <div class="col-md-9">
                     <p>
-                        <?php echo $location['bio']; ?>
+                        <?php echo htmlspecialchars($location['bio']); ?>
                     </p>
                 </div>
             </div>
