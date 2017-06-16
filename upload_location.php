@@ -50,6 +50,7 @@ if ($_POST['type']) {
 
         if ($uploadOk == 0){
             $target_file = null;
+            echo $error;
         }
     }
 
