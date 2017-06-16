@@ -47,17 +47,18 @@ if ($_POST['type']) {
             $error = "Only JPG, JPEG, PNG & GIF files are allowed.";
             $uploadOk = 0;
         }
+    }
 
-    if ($_POST['type'] == '1'){
+    if ($_POST['type'] == '1') {
         $mysqli->query("INSERT INTO Gym (gymId, name, image, bio, published) VALUES "
             . "('$id', '$_POST[name]', '$target_file','$_POST[description]', '0')");
         header("Location: gym_list.php");
 
-    }else if ($_POST['type'] == '2'){
+    } else if ($_POST['type'] == '2') {
         $mysqli->query("INSERT INTO Store (storeId, name, image, bio, published) VALUES "
             . "('$id', '$_POST[name]', '$target_file','$_POST[description]', '0')");
         header("Location: store_list.php");
-    }else if ($_POST['type'] == '3'){
+    } else if ($_POST['type'] == '3') {
         $mysqli->query("INSERT INTO Site (siteId, name, image, bio, lat, lng, directions) VALUES "
             . "('$id', '$_POST[name]', '$target_file','$_POST[description]', '$_POST[lat]', '$_POST[lng]', '$_POST[directions]')");
         header("Location: site_list.php");
