@@ -1,7 +1,15 @@
 <?php include 'header.php' ?>
 
 <?php
-$location = array('name' => $_POST['title'], 'bio' => $_POST['gym_body'], 'published' => 0);
+$location = array(
+        'name' => $_POST['title'],
+        'bio' => $_POST['gym_body'],
+        'address' => $_POST['street'],
+        'city' => $_POST['city'],
+        'state' => $_POST['state'],
+        'zip' => $_POST['zip']
+    );
+
 echo 'POST:<br>';
 foreach ($_POST as $key => $value) {
     echo "Key: $key; Value: $value<br>";
@@ -58,7 +66,9 @@ if (isset($_POST["fileToUpload"])) {
 }
 include 'connect.php';
 
-if ($mysqli->query("INSERT INTO Gym (name, image, bio) VALUES('$location[name]','$location[image]','$location[bio]')")) {
+if ($mysqli->query("INSERT INTO GymAndLocation (name, image, bio, address, city, state, zip)"
+                            ." VALUES('$location[name]','$location[image]','$location[bio]', '$location[address]',"
+                            ." '$location[city]', '$location[state]', '$location[zip]')")) {
     echo "SQL Query was successful";
 } else {
     echo "SQL Query was unsuccessful";
