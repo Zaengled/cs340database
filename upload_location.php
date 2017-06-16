@@ -2,16 +2,11 @@
 include 'connect.php';
 
 if ($_POST['type']) {
-    echo "$_POST[type] <br>";
 
     //Add Location
 
-    if($mysqli->query("INSERT INTO Location (type, city, state, zip, address) "
-        . "VALUES ('$_POST[type]', '$_POST[city]', '$_POST[state]', '$_POST[zip]', '$_POST[address]')")){
-        echo 'Added location <br>';
-    }else{
-        echo "Failed to add location<br>";
-    }
+    $mysqli->query("INSERT INTO Location (type, city, state, zip, address) "
+        . "VALUES ('$_POST[type]', '$_POST[city]', '$_POST[state]', '$_POST[zip]', '$_POST[address]')")
 
     //Get location id
     $id = $mysqli->insert_id;
@@ -52,36 +47,19 @@ if ($_POST['type']) {
             $error = "Only JPG, JPEG, PNG & GIF files are allowed.";
             $uploadOk = 0;
         }
-// Check if $uploadOk is set to 0 by an error
-        if ($uploadOk == 0) {
-            echo "<div class='panel panel-danger'><div class='panel-body'>$error</div></div>";
-        } else {
-            if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-                echo "The file " . basename($_FILES["fileToUpload"]["name"]) . " has been uploaded.";
-            } else {
-                echo "<div class='panel panel-danger'><div class='panel-body'>There was an error uploading your file</div></div>";
-            }
-        }
-    }
 
     if ($_POST['type'] == '1'){
-        if($mysqli->query("INSERT INTO Gym (gymId, name, image, bio, published) VALUES "
-            . "('$id', '$_POST[name]', '$target_file','$_POST[description]', '0')") == true){
-            echo 'Added Gym';
-        }
+        $mysqli->query("INSERT INTO Gym (gymId, name, image, bio, published) VALUES "
+            . "('$id', '$_POST[name]', '$target_file','$_POST[description]', '0')");
         header("Location: gym_list.php");
 
     }else if ($_POST['type'] == '2'){
-        if ($mysqli->query("INSERT INTO Store (storeId, name, image, bio, published) VALUES "
-            . "('$id', '$_POST[name]', '$target_file','$_POST[description]', '0')")){
-            echo 'Added Store';
-        }
+        $mysqli->query("INSERT INTO Store (storeId, name, image, bio, published) VALUES "
+            . "('$id', '$_POST[name]', '$target_file','$_POST[description]', '0')");
         header("Location: store_list.php");
     }else if ($_POST['type'] == '3'){
-        if ($mysqli->query("INSERT INTO Site (siteId, name, image, bio, lat, lng, directions) VALUES "
-            . "('$id', '$_POST[name]', '$target_file','$_POST[description]', '$_POST[lat]', '$_POST[lng]', '$_POST[directions]')")){
-            echo 'Added Site';
-        }
+        $mysqli->query("INSERT INTO Site (siteId, name, image, bio, lat, lng, directions) VALUES "
+            . "('$id', '$_POST[name]', '$target_file','$_POST[description]', '$_POST[lat]', '$_POST[lng]', '$_POST[directions]')");
         header("Location: site_list.php");
     }
     header("Location: index.php");
