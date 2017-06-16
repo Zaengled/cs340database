@@ -1,7 +1,7 @@
 <?php
 include 'header.php';
 include 'connect.php';
-$gyms = mysqli_query($mysqli, 'SELECT * FROM Gym WHERE published = "0"');
+$gyms = mysqli_query($mysqli, 'SELECT * FROM GymAndLocation WHERE published = "0"');
 $stores = mysqli_query($mysqli, 'SELECT * FROM Store where published = "0"');
 
 if ($_SESSION['admin']) { ?>
