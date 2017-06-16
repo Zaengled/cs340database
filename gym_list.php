@@ -17,13 +17,20 @@ $result = mysqli_query($mysqli, $sql);
                         <input type="text" class="form-control" name="title" placeholder="Name">
                     </div>
                     <div class="form-group">
-                        <label for="gym_body">Body</label>
-                        <textarea class="form-control" name="gym_body">Add a description</textarea>
-                    </div>
-                    <div class="form-group">
                         <label for="gym_image">Gym Image</label>
                         <input type="file" name="fileToUpload" id="gym_image">
                     </div>
+                    <div class="form-group">
+                        <label for="gym_body">Body</label>
+                        <textarea class="form-control" name="gym_body" placeholder="Add a description"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="street" placeholder="Street">
+                        <input type="text" class="form-control" name="city" placeholder="City">
+                        <input type="text" class="form-control" name="state" placeholder="State">
+                        <input type="text" class="form-control" name="zip" placeholder="Zip"
+                    </div>
+
                     <button class="btn btn-primary" type="submit">Submit</button>
                 </form>
             </div>
