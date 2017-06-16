@@ -8,19 +8,16 @@ if (!$mysqli) {
 ?>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 <script src="js/locationgrab.js"></script>
-<div class="row">
-    <div class="col-lg-12">
-        <form class="col-lg-6 col-lg-offset-3">
-            <div class="input-group">
+    <form class="col-lg-6 col-lg-offset-3">
+        <div class="input-group">
             <span class="input-group-btn">
                 <button class="btn btn-default"><span class="glyphicon glyphicon-screenshot"></span></button>
             </span>
-                <input class="form-control" type="text" id="city" placeholder="Search for nearby locations!">
-                <span class="input-group-btn">
+            <input class="form-control" type="text" id="city" placeholder="Search for nearby locations!">
+            <span class="input-group-btn">
                 <button class="btn btn-primary" onclick="grabResults()">Search</button>
             </span>
-        </form>
-    </div>
+    </form>
     <div class="panel panel-default">
         <div class="panel-heading">
             Gyms
@@ -52,6 +49,4 @@ if (!$mysqli) {
         </ul>
         <div style="display: none;" id="city"><span id="city"></span></div>
     </div>
-</div>
-</div>
 <?php include 'footer.php'; ?>
