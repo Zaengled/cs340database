@@ -25,29 +25,26 @@ $result = mysqli_query($mysqli, $sql);
                         <textarea class="form-control" name="gym_body" placeholder="Add a description"></textarea>
                     </div>
                     <fieldset class="form-group" id="address" name="address">
-                    <div class="row">
-                        <div class="form-group">
-                        <input type="text" class="form-control" name="street" placeholder="Street">
+                        <div class="row">
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="street" placeholder="Street">
+                            </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="form-group col-md-4">
-                            <input type="text" class="form-control" name="city" placeholder="City">
+                        <div class="row">
+                            <div class="form-group col-md-4">
+                                <input type="text" class="form-control" name="city" placeholder="City">
+                            </div>
+                            <div class="col-md-4 form-group">
+                                <input type="text" class="form-control" name="state" placeholder="State">
+                            </div>
+                            <div class="col-md-4 form-group">
+                                <input type="text" class="form-control" name="zip" placeholder="Zip"
+                            </div>
                         </div>
-                        <div class="col-md-4 form-group">
-                            <input type="text" class="form-control" name="state" placeholder="State">
-                        </div>
-                        <div class="col-md-4 form-group">
-                            <input type="text" class="form-control" name="zip" placeholder="Zip"
-                        </div>
-                    </div>
                     </fieldset>
+                    <button class="btn btn-primary" type="submit">Submit</button>
 
-
-                    </fieldset>
             </div>
-
-            <button class="btn btn-primary" type="submit">Submit</button>
             </form>
         </div>
     </div>
