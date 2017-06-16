@@ -14,15 +14,16 @@ if (!$mysqli) {
             <form action='#' onsubmit="grabResults()">
                 <div class="input-group">
                     <span class="input-group-btn">
-                <button class="btn btn-default"><span class="glyphicon glyphicon-screenshot"></span></button>
-            </span>
+                        <button class="btn btn-default">
+                            <span class="glyphicon glyphicon-screenshot"></span>
+                        </button>
+                    </span>
                     <input class="form-control" type="text" id="city" placeholder="Enter City...">
                     <span class="input-group-btn">
-                <button class="btn btn-primary" type="submit">Search</button>
-            </span>
+                        <button class="btn btn-primary" type="submit">Search</button>
+                    </span>
                 </div>
             </form>
-
         </div>
         <div class="panel panel-default">
             <div class="panel-heading">
