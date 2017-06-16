@@ -14,7 +14,7 @@ if (!$mysqli) {
             <span class="input-group-btn">
                 <button class="btn btn-default"><span class="glyphicon glyphicon-screenshot"></span></button>
             </span>
-            <input type="text" id="city" placeholder="Enter City...">
+            <input class="form-control" type="text" id="city" placeholder="Enter City...">
             <span class="input-group-btn">
                 <button class="btn btn-primary" onclick="grabResults()">Search</button>
             </span>
