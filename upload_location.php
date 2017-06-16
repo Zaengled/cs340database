@@ -6,7 +6,7 @@ if ($_POST['type']) {
     //Add Location
 
     $mysqli->query("INSERT INTO Location (type, city, state, zip, address) "
-        . "VALUES ('$_POST[type]', '$_POST[city]', '$_POST[state]', '$_POST[zip]', '$_POST[address]')")
+        . "VALUES ('$_POST[type]', '$_POST[city]', '$_POST[state]', '$_POST[zip]', '$_POST[address]')");
 
     //Get location id
     $id = $mysqli->insert_id;
