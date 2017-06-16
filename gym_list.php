@@ -26,9 +26,15 @@ $result = mysqli_query($mysqli, $sql);
                     </div>
                     <fieldset class="form-group">
                         <input type="text" class="form-control" name="street" placeholder="Street">
-                        <input type="text" class="form-control" name="city" placeholder="City">
-                        <input type="text" class="form-control" name="state" placeholder="State">
-                        <input type="text" class="form-control" name="zip" placeholder="Zip"
+                        <div class="col-4">
+                            <input type="text" class="form-control" name="city" placeholder="City">
+                        </div>
+                        <div class="col-4">
+                            <input type="text" class="form-control" name="state" placeholder="State">
+                        </div>
+                        <div class="col-4">
+                            <input type="text" class="form-control" name="zip" placeholder="Zip"
+                        </div>
                     </fieldset>
             </div>
 
