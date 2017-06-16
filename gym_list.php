@@ -26,16 +26,23 @@ $result = mysqli_query($mysqli, $sql);
                     </div>
                     <div class="form-group">
                         <input type="text" class="form-control" name="street" placeholder="Street">
+                    </div>
+                    <div class="form-control">
                         <input type="text" class="form-control" name="city" placeholder="City">
+                    </div>
+                    <div class="form-control">
                         <input type="text" class="form-control" name="state" placeholder="State">
+                    </div>
+                    <div class="form-control">
                         <input type="text" class="form-control" name="zip" placeholder="Zip"
                     </div>
-
-                    <button class="btn btn-primary" type="submit">Submit</button>
-                </form>
             </div>
-            <div class="modal-footer"></div>
+
+            <button class="btn btn-primary" type="submit">Submit</button>
+            </form>
         </div>
+        <div class="modal-footer"></div>
+    </div>
     </div>
 
     <div class="panel panel-default">
@@ -64,7 +71,7 @@ $result = mysqli_query($mysqli, $sql);
             if ($_SESSION['valid'] == true) {
                 echo "<a href='#'"
                     . "onclick=\"document.getElementById('new_gym').style.display='block'\""
-                    .">Suggest a gym <span class='glyphicon glyphicon-plus-sign'></span></a>";
+                    . ">Suggest a gym <span class='glyphicon glyphicon-plus-sign'></span></a>";
             } else {
                 echo "<a onclick=\"document.getElementById('id01').style.display='block'\">Login"
                     . "</a> to suggest gyms!";
