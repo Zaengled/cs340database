@@ -1,6 +1,8 @@
 <?php include 'header.php' ?>
 
 <?php
+include 'connect.php';
+
 $location = array(
         'name' => $_POST['title'],
         'bio' => $_POST['gym_body'],
@@ -9,6 +11,11 @@ $location = array(
         'state' => $_POST['state'],
         'zip' => $_POST['zip']
     );
+
+$id = $mysqli->query("INSERT INTO Location (type, city, state, zip, address) "
+                ."OUTPUT INSERTED.objid"
+                ."VALUES ('1', '$_POST[city]', '$_POST[state]', '$_POST[zip]', '$_POST[address]')");
+echo $id;
 
 echo 'POST:<br>';
 foreach ($_POST as $key => $value) {
@@ -64,7 +71,6 @@ echo '<br><br>';
         }
     }
 }*/
-include 'connect.php';
 
 if ($mysqli->query("INSERT INTO GymAndLocation (name, image, bio, address, city, state, zip)"
                             ." VALUES('$location[name]','$location[image]','$location[bio]', '$location[address]',"
