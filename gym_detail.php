@@ -47,8 +47,7 @@ if (isset($_POST["fileToUpload"])) {
         echo "<div class='panel panel-danger'><div class='panel-body'>$error</div></div>";
     } else {
         if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-            //echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
-            $location['image'] = $target_file;
+            echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
         } else {
             echo "<div class='panel panel-danger'><div class='panel-body'>There was an error uploading your file</div></div>";
         }
