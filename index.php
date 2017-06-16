@@ -9,14 +9,12 @@ if (!$mysqli) {
 <script src="js/locationgrab.js"></script>
 <div class="row" style="margin-top:10px; margin-bottom:10px;">
     <div class="col-md-6 col-md-offset-3">
-        <form action='#' onsubmit="grabResults()">
             <div class="input-group">
                 <input class="form-control" type="text" id="city" placeholder="Enter City...">
                 <span class="input-group-btn">
-                        <button class="btn btn-primary" type="submit">Search</button>
+                        <button class="btn btn-primary" type="submit" onclick="grabResults()">Search</button>
                     </span>
             </div>
-        </form>
     </div>
 </div>
 <div class="row">
