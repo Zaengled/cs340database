@@ -32,9 +32,9 @@ $result = mysqli_query($mysqli, $sql);
                         <label for="directions">Directions</label>
                         <textarea class="form-control" id="directions" name="directions" placeholder="Add directions"></textarea>
                     </div>
-                    <fieldset class="form-control" id="coordinates">
+                    <fieldset class="form-group" id="coordinates">
                         <div class="row">
-                            <div class="form-group col-md-6">
+                            <div class="form-control col-md-6">
                                 <input type="text" class="form-control" name="lat" placeholder="Latitude">
                             </div>
                             <div class="form-control col-md-6">
