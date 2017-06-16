@@ -15,7 +15,7 @@ $location = array(
 $mysqli->query("INSERT INTO Location (type, city, state, zip, address) "
                 ."VALUES ('1', '$_POST[city]', '$_POST[state]', '$_POST[zip]', '$_POST[street]')");
 $id = $mysqli->insert_id;
-echo "RETURNED OBJID:$id";
+echo "RETURNED OBJID:$id<br>";
 
 echo 'POST:<br>';
 foreach ($_POST as $key => $value) {
