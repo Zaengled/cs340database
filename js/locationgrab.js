@@ -1,5 +1,11 @@
 var myCity;
 
+document.onkeydown=function(){
+    if(window.event.keyCode=='13'){
+        grabResults();
+    }
+}
+
 function grabResults( city ){
 
 	if(!city){
