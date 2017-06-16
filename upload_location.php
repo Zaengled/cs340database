@@ -2,12 +2,14 @@
 include 'connect.php';
 
 if ($_POST['type']) {
+    echo "$_POST[type] <br>";
 
     //Add Location
 
     echo $mysqli->query("INSERT INTO Location (type, city, state, zip, address) "
         . "VALUES ('$_POST[type], '$_POST[city]', '$_POST[state]', '$_POST[zip]', '$_POST[address]')");
 
+    echo "<br>";
     //Get location id
     $id = $mysqli->insert_id;
 
