@@ -24,17 +24,21 @@ $result = mysqli_query($mysqli, $sql);
                         <label for="gym_body">Body</label>
                         <textarea class="form-control" name="gym_body" placeholder="Add a description"></textarea>
                     </div>
-                    <fieldset class="form-group">
+                    <div class="row form-group">
                         <input type="text" class="form-control" name="street" placeholder="Street">
-                        <div class="col-md-4">
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-4">
                             <input type="text" class="form-control" name="city" placeholder="City">
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-4 form-group">
                             <input type="text" class="form-control" name="state" placeholder="State">
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-4 form-group">
                             <input type="text" class="form-control" name="zip" placeholder="Zip"
                         </div>
+                    </div>
+
                     </fieldset>
             </div>
 
