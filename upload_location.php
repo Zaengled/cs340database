@@ -61,7 +61,8 @@ if ($_POST['type']) {
     } else if ($_POST['type'] == '3') {
         $mysqli->query("INSERT INTO Site (siteId, name, image, bio, lat, lng, directions) VALUES "
             . "('$id', '$_POST[name]', '$target_file','$_POST[description]', '$_POST[lat]', '$_POST[lng]', '$_POST[directions]')");
-        header("Location: site_list.php");
+        header("Location: site_detail.php?objid=$id");
+    } else {
+        header( "Location: index.php");
     }
-    header("Location: index.php");
 }
