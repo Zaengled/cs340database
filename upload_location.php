@@ -47,6 +47,10 @@ if ($_POST['type']) {
             $error = "Only JPG, JPEG, PNG & GIF files are allowed.";
             $uploadOk = 0;
         }
+
+        if ($uploadOk == 0){
+            $target_file = null;
+        }
     }
 
     if ($_POST['type'] == '1') {
