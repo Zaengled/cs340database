@@ -36,8 +36,8 @@ if ($_GET["usr"]) {
 						</tr>
 					</table>
                     <div class="well" style="margin-bottom:0;">
-                        <button id="edbutton" onclick="editProfile()">Edit</button>
-						<div  id="edit" style="visibility:hidden">
+                        <button id="edbutton" onclick="editProfile()" style="display:block">Edit</button>
+						<div  id="edit" style="display:none">
 						<form action='profile_update.php' method='post'enctype='multipart/form-data'>
 							Skill:<br>
 							<input type='text' name='skill' value='<?php echo htmlspecialchars($user['Skill']);?>'>
@@ -68,8 +68,8 @@ if ($_GET["usr"]) {
 			if('<?php echo $_SESSION['userName']?>' == '<?php echo $user['userName']?>'){
 				var myDiv = document.getElementById("edit");
 				var myButton = document.getElementById("edbutton");
-				myButton.style.visibility = 'hidden';
-				myDiv.style.visibility = 'visible';
+				myButton.style.display = 'none';
+				myDiv.style.display = 'block';
 			}
 		}
 	</script>
