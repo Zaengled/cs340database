@@ -7,6 +7,9 @@ if (!$mysqli) {
 
 ?>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDd-rMEMfv6gsgrNJX7HVm0xm8D_xkWua8&callback=initMap">
+</script>
 <script src="js/locationgrab.js"></script>
 <div class="row" style="margin-top:10px; margin-bottom:10px;">
     <div class="col-md-6 col-md-offset-3">
