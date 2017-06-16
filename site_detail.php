@@ -14,26 +14,26 @@ if ($_GET["objid"]) {
     }
 }
 ?>
-
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h4><?php echo $location["name"]; ?>
-                <span class='stars' style="float:right;">
+    <div class="row">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4><?php echo $location["name"]; ?>
+                    <span class='stars' style="float:right;">
                 <?php echo "$location[rating] "; ?>
-                <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
                 </span>
-            </h4>
-        </div>
-        <div class="panel-body">
-            <div class="col-md-3">
-                <?php echo "<img class='img-responsive' src='$location[image]'>";?>
+                </h4>
             </div>
-            <div class="col-md-9">
-                <p>
-                    <?php echo $location['bio'];?>
-                </p>
+            <div class="panel-body">
+                <div class="col-md-3">
+                    <?php echo "<img class='img-responsive' src='$location[image]'>"; ?>
+                </div>
+                <div class="col-md-9">
+                    <p>
+                        <?php echo $location['bio']; ?>
+                    </p>
+                </div>
             </div>
-        </div>
             <div class="row well" style="margin-bottom:0;">
                 <span class="glyphicon glyphicon-home"></span>
                 <?php $address = "$location[address], $location[city], $location[state] $location[zip]";
