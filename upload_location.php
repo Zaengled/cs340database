@@ -12,7 +12,7 @@ if ($_POST['type']) {
     $id = $mysqli->insert_id;
 
     //Upload Image
-    if (isset($_POST["fileToUpload"])) {
+    if (isset($_FILES["fileToUpload"])) {
 
         $target_dir = "uploads/";
         $target_file = $target_dir . str_replace(' ', '-', $_POST['name']);
