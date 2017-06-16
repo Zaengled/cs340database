@@ -61,7 +61,7 @@ if ($_POST['submit']) {
 
     if ($_POST['type'] = '1'){
         $mysqli->query("INSERT INTO Gym (gymId, name, image, bio, published) VALUES "
-            . "('$id', '$_POST[name]', '$target_file','$_POST[description]', '0')");
+            . "('$id', '$_POST[name]', '$target_file','$_POST[description]', '0')") == true;
     }else if ($_POST['type'] == '2'){
         $mysqli->query("INSERT INTO Store (storeId, name, image, bio, published) VALUES "
             . "('$id', '$_POST[name]', '$target_file','$_POST[description]', '0')");

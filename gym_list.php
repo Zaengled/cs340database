@@ -11,10 +11,10 @@ $result = mysqli_query($mysqli, $sql);
                 <h4>Suggest a Gym</h4>
             </div>
             <div class="modal-body">
-                <form action="gym_detail.php" method="post" enctype="multipart/form-data">
+                <form action="upload_location.php" method="post" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="gym_name">Name</label>
-                        <input type="text" class="form-control" name="title" placeholder="Name">
+                        <input type="text" class="form-control" name="name" placeholder="Name">
                     </div>
                     <div class="form-group">
                         <label for="gym_image">Gym Image</label>
@@ -22,13 +22,13 @@ $result = mysqli_query($mysqli, $sql);
                     </div>
                     <div class="form-group">
                         <label for="gym_body">Body</label>
-                        <textarea class="form-control" name="gym_body" placeholder="Add a description"></textarea>
+                        <textarea id="gym_body" class="form-control" name="description" placeholder="Add a description"></textarea>
                     </div>
-                    <fieldset class="form-group" id="address" name="address">
+                    <fieldset class="form-group" id="address">
                         <label for="address">Address</label>
                         <div class="row">
                             <div class="form-group">
-                                <input type="text" class="form-control" name="street" placeholder="Street">
+                                <input type="text" class="form-control" name="address" placeholder="Street">
                             </div>
                         </div>
                         <div class="row">
