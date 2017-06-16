@@ -10,7 +10,7 @@ if (!$mysqli) {
 <script src="js/locationgrab.js"></script>
 <div class="row">
     <div class="col-lg-12">
-        <div class="input-group">
+        <div class="col-md-6 col-md-offset-3 input-group">
             <span class="input-group-btn">
                 <button class="btn btn-default"><span class="glyphicon glyphicon-screenshot"></span></button>
             </span>
