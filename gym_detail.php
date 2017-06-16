@@ -32,12 +32,16 @@ if ($_GET["objid"]) {
                     </h2>
                 </div>
                 <div class="panel-body">
-                    <table>
-                        <tr>
-                            <td style="padding:15px;">
-                                <?php echo "<img src='$location[image]'>"?>
-                            </td>
-                            <td>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <?php echo "<img src='$location[image]'>";?>
+                        </div>
+                        <div class="col-md-9">
+                            <p>
+                                <?php echo $location['bio'];?>
+                            </p>
+                        </div>
+                    </div>
                                 <p>
                                     <?php echo $location['bio']; ?>
                                 </p>
@@ -61,13 +65,4 @@ if ($_GET["objid"]) {
 
         </div>
     </div>
-    <script>
-        $('document').ready(
-            function () {
-                if ("<?php echo $location['image'];?>" != "") {
-                    document.getElementById("imageslot").innerHTML = "<img style='border:1px solid black;' src='uploads/<?php echo $location['image']; ?>'>"
-                }
-            }
-        )
-    </script>
 <?php include 'footer.php' ?>
