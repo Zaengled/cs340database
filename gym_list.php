@@ -25,6 +25,7 @@ $result = mysqli_query($mysqli, $sql);
                         <textarea class="form-control" name="gym_body" placeholder="Add a description"></textarea>
                     </div>
                     <fieldset class="form-group" id="address" name="address">
+                        <label for="address" >Address</label>
                         <div class="row">
                             <div class="form-group">
                                 <input type="text" class="form-control" name="street" placeholder="Street">
