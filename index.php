@@ -8,7 +8,7 @@ if (!$mysqli) {
 ?>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 <script src="js/locationgrab.js"></script>
-<div class="row">
+<div class="row" style="margin-top:10px; margin-bottom:10px;">
     <div class="col-md-6 col-md-offset-3">
         <form action='#' onsubmit="grabResults()">
             <div class="input-group">
