@@ -11,10 +11,12 @@ if ($_POST['type']) {
     //Get location id
     $id = $mysqli->insert_id;
 
-    $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 
     $target_dir = "uploads/";
-    $target_file = $target_dir . basename(str_replace(' ', '-', $_POST['name'].'.'.$imageFileType));
+    $file_extension = pathinfo($_FILES["fileToUpload"]["name"])['extension'];
+
+    $target_file = $target_dir . basename(str_replace(' ', '-', $_POST['name'].'.'.$file_extension));
+    $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
     $uploadOk = 1;
     // Check if image file is a actual image or fake image
     if(isset($_POST["type"])) {
