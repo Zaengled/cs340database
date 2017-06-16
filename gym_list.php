@@ -27,13 +27,13 @@ $result = mysqli_query($mysqli, $sql);
                     <div class="form-group">
                         <input type="text" class="form-control" name="street" placeholder="Street">
                     </div>
-                    <div class="form-control">
+                    <div class="form-group">
                         <input type="text" class="form-control" name="city" placeholder="City">
                     </div>
-                    <div class="form-control">
+                    <div class="form-group">
                         <input type="text" class="form-control" name="state" placeholder="State">
                     </div>
-                    <div class="form-control">
+                    <div class="form-group">
                         <input type="text" class="form-control" name="zip" placeholder="Zip"
                     </div>
             </div>
