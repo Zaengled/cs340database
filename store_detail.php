@@ -54,7 +54,7 @@ if (isset($_POST["fileToUpload"])) {
 }
 
 $mysqli->query("INSERT INTO Gym (gymId, name, image, bio, published) VALUES "
-    . "('$id', '$_POST[title]', '$target_file','$_POST[gym_body]', '0')");
+    . "('$id', '$_POST[title]', '$target_file','$_POST[store_desc]', '0')");
 
 if ($_GET["objid"] || $id) {
     if ($_GET["objid"]){$id=$_GET["objid"];}
