@@ -34,7 +34,7 @@ if ($_GET["objid"]) {
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-md-3">
-                            <?php echo "<img src='$location[image]'>";?>
+                            <?php echo "<img class='img-responsive' src='$location[image]'>";?>
                         </div>
                         <div class="col-md-9">
                             <p>
