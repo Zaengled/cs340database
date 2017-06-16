@@ -9,7 +9,7 @@ if ($_SESSION['admin']) {
         $mysqli->query("EXECUTE publishGymOrStore($_GET[approve])");
     }
     if (isset($_GET['delete'])){
-        $mysqli->query("DELETE FROM Location WHERE objid=$_GET[delete]")
+        $mysqli->query("DELETE FROM Location WHERE objid=$_GET[delete]");
     }
     ?>
     <h2>Admin Console</h2>
