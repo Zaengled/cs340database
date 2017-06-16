@@ -2,7 +2,7 @@
 <?php
 include 'connect.php';
 
-$sql = "SELECT * FROM `GymAndLocation WHERE published = '1'`";
+$sql = "SELECT * FROM `GymAndLocation`WHERE published = '1'";
 $result = mysqli_query($mysqli, $sql);
 ?>
     <div id="new_gym" class="modal">
