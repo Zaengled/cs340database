@@ -9,7 +9,7 @@ if (!$mysqli) {
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 <script src="js/locationgrab.js"></script>
 <div class="row">
-    <form style="margin:10px 0"class="col-lg-6 col-lg-offset-3">
+    <form style="margin-top:10px; margin-bottom:0px;"class="col-lg-6 col-lg-offset-3">
         <div class="input-group">
             <span class="input-group-btn">
                 <button class="btn btn-default"><span class="glyphicon glyphicon-screenshot"></span></button>
