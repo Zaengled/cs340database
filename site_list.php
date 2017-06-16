@@ -34,10 +34,10 @@ $result = mysqli_query($mysqli, $sql);
                     </div>
                     <fieldset class="form-group" id="coordinates">
                         <div class="row">
-                            <div class="form-control col-md-6">
+                            <div class="form-group col-md-6">
                                 <input type="text" class="form-control" name="lat" placeholder="Latitude">
                             </div>
-                            <div class="form-control col-md-6">
+                            <div class="form-group col-md-6">
                                 <input type="text" class="form-control" name="lng" placeholder="Longitude">
                             </div>
                         </div>
