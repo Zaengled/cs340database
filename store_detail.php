@@ -53,7 +53,7 @@ if (isset($_POST["fileToUpload"])) {
     }
 }
 
-$mysqli->query("INSERT INTO Gym (gymId, name, image, bio, published) VALUES "
+$mysqli->query("INSERT INTO Store (storeId, name, image, bio, published) VALUES "
     . "('$id', '$_POST[title]', '$target_file','$_POST[store_desc]', '0')");
 
 if ($_GET["objid"] || $id) {
