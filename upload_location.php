@@ -1,7 +1,7 @@
 <?php
 include 'connect.php';
 
-if ($_POST['submit']) {
+if ($_POST['type']) {
 
     //Add Location
 
