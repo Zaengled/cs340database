@@ -72,16 +72,13 @@ echo '<br><br>';
     }
 }*/
 
-if ($mysqli->query("INSERT INTO Gym (id, name, bio, published) VALUES ".
-        "($id, '$location[name]',$location[bio]', '0')")) {
+if ($mysqli->query("INSERT INTO Gym (gymId, name, bio, published) VALUES ".
+        "($id, '$_POST[name]',$_POST[gym_body]', '0')")) {
     echo "SQL Query was successful";
 } else {
     echo "SQL Query was unsuccessful";
 }
 echo "<br>";
-foreach ($location as $key => $value) {
-    echo "Key: $key; Value: $value<br>";
-}
 
 ?>
 
