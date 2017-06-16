@@ -62,7 +62,7 @@ $result = mysqli_query($mysqli, $sql);
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
                     echo "<a class='list-group-item' href='gym_detail.php?objid=" . $row["objid"] . "'>"
-                        . $row["name"]
+                        . htmlspecialchars($row["name"])
                         . '<small style="float:right;" class="rating">'
                         . '<span class="glyphicon glyphicon-star"></span> '
                         . $row['rating']
