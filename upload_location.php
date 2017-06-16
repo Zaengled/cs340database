@@ -11,10 +11,11 @@ if ($_POST['type']) {
     //Get location id
     $id = $mysqli->insert_id;
 
-    $target_dir = "uploads/";
-    $target_file = $target_dir . basename(str_replace(' ', '-', $_POST['name']));
-    $uploadOk = 1;
     $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
+
+    $target_dir = "uploads/";
+    $target_file = $target_dir . basename(str_replace(' ', '-', $_POST['name'].'.'.$imageFileType));
+    $uploadOk = 1;
     // Check if image file is a actual image or fake image
     if(isset($_POST["type"])) {
         $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
@@ -40,6 +41,8 @@ if ($_POST['type']) {
     // Check if $uploadOk is set to 0 by an error
     if ($uploadOk == 1) {
         move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file);
+    }else{
+        $location['image'] = null;
     }
 
 
