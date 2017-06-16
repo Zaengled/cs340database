@@ -72,9 +72,7 @@ echo '<br><br>';
     }
 }*/
 
-if ($mysqli->query("INSERT INTO GymAndLocation (name, image, bio, address, city, state, zip)"
-                            ." VALUES('$location[name]','$location[image]','$location[bio]', '$location[address]',"
-                            ." '$location[city]', '$location[state]', '$location[zip]')")) {
+if ($mysqli->query("INSERT INTO Gym (id, name, image, bio) VALUES($id, '$location[name]','$location[image]','$location[bio]')")) {
     echo "SQL Query was successful";
 } else {
     echo "SQL Query was unsuccessful";
@@ -87,12 +85,14 @@ foreach ($location as $key => $value) {
 ?>
 
 <?php
-if ($_GET["objid"]) {
-    $sql = "SELECT * FROM `GymAndLocation` WHERE `objid` = " . $_GET["objid"];
+if ($_GET["objid"] || $id) {
+    if ($_GET["objid"]){$id=$_GET["objid"];}
+
+    $sql = "SELECT * FROM `GymAndLocation` WHERE `objid` = " . $id;
     $result = mysqli_query($mysqli, $sql);
-    $sql2 = "SELECT * FROM `Reviews` WHERE `objid` = " . $_GET["objid"];
+    $sql2 = "SELECT * FROM `Reviews` WHERE `objid` = " . $id;
     $reviews = mysqli_query($mysqli, $sql2);
-    $sql3 = "SELECT * FROM `Route` WHERE `locationID` = " . $_GET["objid"];
+    $sql3 = "SELECT * FROM `Route` WHERE `locationID` = " . $id;
     $routes = mysqli_query($mysqli, $sql3);
 
 
