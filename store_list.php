@@ -78,7 +78,7 @@ $result = mysqli_query($mysqli, $sql);
         <div class="panel-footer">
             <?php
             if ($_SESSION['valid'] == true) {
-                echo "<a"
+                echo "<a href='#'"
                     . "onclick=\"document.getElementById('new_gym').style.display='block'\""
                     .">Suggest a store <span class='glyphicon glyphicon-plus-sign'></span></a>";
             } else {
