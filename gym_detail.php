@@ -72,8 +72,8 @@ echo '<br><br>';
     }
 }*/
 
-if ($mysqli->query("INSERT INTO Gym (id, name, image, bio, published) VALUES ".
-        "($id, '$location[name]','$location[image]','$location[bio]', '0')")) {
+if ($mysqli->query("INSERT INTO Gym (id, name, bio, published) VALUES ".
+        "($id, '$location[name]',$location[bio]', '0')")) {
     echo "SQL Query was successful";
 } else {
     echo "SQL Query was unsuccessful";
