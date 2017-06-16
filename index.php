@@ -9,22 +9,23 @@ if (!$mysqli) {
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 <script src="js/locationgrab.js"></script>
 <div class="row">
-    <div class="col-lg-12">
-        <div class="col-md-6 col-md-offset-3">
-            <form action='#' onsubmit="grabResults()">
-                <div class="input-group">
+    <div class="col-md-6 col-md-offset-3">
+        <form action='#' onsubmit="grabResults()">
+            <div class="input-group">
                     <span class="input-group-btn">
                         <button class="btn btn-default">
                             <span class="glyphicon glyphicon-screenshot"></span>
                         </button>
                     </span>
-                    <input class="form-control" type="text" id="city" placeholder="Enter City...">
-                    <span class="input-group-btn">
+                <input class="form-control" type="text" id="city" placeholder="Enter City...">
+                <span class="input-group-btn">
                         <button class="btn btn-primary" type="submit">Search</button>
                     </span>
-                </div>
-            </form>
-        </div>
+            </div>
+        </form>
+    </div>
+    <div class="col-lg-12">
+
         <div class="panel panel-default">
             <div class="panel-heading">
                 Gyms
