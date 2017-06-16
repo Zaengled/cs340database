@@ -6,10 +6,11 @@ if ($_POST['type']) {
 
     //Add Location
 
-    echo $mysqli->query("INSERT INTO Location (type, city, state, zip, address) "
-        . "VALUES ('$_POST[type], '$_POST[city]', '$_POST[state]', '$_POST[zip]', '$_POST[address]')");
+    if($mysqli->query("INSERT INTO Location (type, city, state, zip, address) "
+        . "VALUES ('$_POST[type], '$_POST[city]', '$_POST[state]', '$_POST[zip]', '$_POST[address]')")){
+        echo 'Added location <br>';
+    }
 
-    echo "<br>";
     //Get location id
     $id = $mysqli->insert_id;
 
@@ -62,13 +63,19 @@ if ($_POST['type']) {
     }
 
     if ($_POST['type'] = '1'){
-        echo $mysqli->query("INSERT INTO Gym (gymId, name, image, bio, published) VALUES "
-            . "('$id', '$_POST[name]', '$target_file','$_POST[description]', '0')") == true;
+        if($mysqli->query("INSERT INTO Gym (gymId, name, image, bio, published) VALUES "
+            . "('$id', '$_POST[name]', '$target_file','$_POST[description]', '0')") == true){
+            echo 'Added Gym';
+        }
     }else if ($_POST['type'] == '2'){
-        echo $mysqli->query("INSERT INTO Store (storeId, name, image, bio, published) VALUES "
-            . "('$id', '$_POST[name]', '$target_file','$_POST[description]', '0')");
+        if ($mysqli->query("INSERT INTO Store (storeId, name, image, bio, published) VALUES "
+            . "('$id', '$_POST[name]', '$target_file','$_POST[description]', '0')")){
+            echo 'Added Store';
+        }
     }else if ($_POST['type'] == '3'){
-        echo $mysqli->query("INSERT INTO Site (siteId, name, image, bio, lat, lng, directions) VALUES "
-            . "('$id', '$_POST[name]', '$target_file','$_POST[description]', '$_POST[lat]', '$_POST[lng]', '$_POST[directions]')");
+        if ($mysqli->query("INSERT INTO Site (siteId, name, image, bio, lat, lng, directions) VALUES "
+            . "('$id', '$_POST[name]', '$target_file','$_POST[description]', '$_POST[lat]', '$_POST[lng]', '$_POST[directions]')")){
+            echo 'Added Site';
+        }
     }
 }
