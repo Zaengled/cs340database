@@ -47,7 +47,7 @@ if ($_SESSION['admin']) {
             <?php
             foreach ($stores as $gym) {
                 echo "<li class='list-group-item clearfix' >"
-                    . "<h4>$gym[name]"
+                    . "<h4>$gym[name] <small>$gym[objid]</small>"
                     . "<div style='float:right;' class='btn-group' role='group'>"
                     . "<a href='admin_list.php?publish=$gym[objid]' class='btn btn-default' title='Publish'>"
                     . "<span class='glyphicon glyphicon-ok'></span></a>"
