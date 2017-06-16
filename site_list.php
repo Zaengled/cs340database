@@ -15,7 +15,7 @@ $result = mysqli_query($mysqli, $sql);
             </div>
             <div class="modal-body">
                 <form action="upload_location.php" method="post" enctype="multipart/form-data">
-                    <input type="hidden" name="type" value="2">
+                    <input type="hidden" name="type" value="3">
                     <div class="form-group">
                         <label for="store_name">Name</label>
                         <input id="store_name" type="text" class="form-control" name="name" placeholder="Name">
