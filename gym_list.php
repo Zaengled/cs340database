@@ -12,6 +12,7 @@ $result = mysqli_query($mysqli, $sql);
             </div>
             <div class="modal-body">
                 <form action="upload_location.php" method="post" enctype="multipart/form-data">
+                    <input type="hidden" name="type" value="1">
                     <div class="form-group">
                         <label for="gym_name">Name</label>
                         <input type="text" class="form-control" name="name" placeholder="Name">
