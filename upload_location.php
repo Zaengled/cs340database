@@ -43,6 +43,8 @@ if ($_POST['type']) {
     // Check if $uploadOk is set to 0 by an error
     if ($uploadOk == 1) {
         move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file);
+        chmod($target_file, 0755);
+
     }else{
         $location['image'] = null;
     }
