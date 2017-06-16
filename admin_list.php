@@ -3,7 +3,7 @@ include 'header.php';
 include 'connect.php';
 if ($_SESSION['admin']) {
     if (isset($_GET['approve'])){
-        $mysqli->query("EXECUTE publishGymOrStore($_GET[approve])");
+        $mysqli->query("publishGymOrStore $_GET[approve]");
     }
     if (isset($_GET['delete'])){
         $mysqli->query("DELETE FROM Location WHERE objid=$_GET[delete]");
