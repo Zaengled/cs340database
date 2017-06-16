@@ -68,7 +68,7 @@ if ($_POST['type']) {
         if($mysqli->query("INSERT INTO Gym (gymId, name, image, bio, published) VALUES "
             . "('$id', '$_POST[name]', '$target_file','$_POST[description]', '0')") == true){
             echo 'Added Gym';
-            header("Location: gym_detail.php?objid=$id");
+            header("Location: gym_list.php");
         }
     }else if ($_POST['type'] == '2'){
         if ($mysqli->query("INSERT INTO Store (storeId, name, image, bio, published) VALUES "
