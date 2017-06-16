@@ -33,7 +33,7 @@
                 echo ")'>";
                 echo "</span>";
                 echo "<span class='fill'>Route #" . $row["routeID"] . "</span>";
-                echo "<span class='right'>Difficulty: " . $row["difficulty"] . "</span></a>";
+                echo "<span class='right'>Difficulty: " . htmlspecialchars($row["difficulty"]) . "</span></a>";
             }
         } else {
             echo "<li class='list-group-item'> No routes yet!</li>";
