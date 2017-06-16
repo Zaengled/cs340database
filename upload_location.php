@@ -5,7 +5,7 @@ if ($_POST['type']) {
 
     //Add Location
 
-    $mysqli->query("INSERT INTO Location (type, city, state, zip, address) "
+    echo $mysqli->query("INSERT INTO Location (type, city, state, zip, address) "
         . "VALUES ('$_POST[type], '$_POST[city]', '$_POST[state]', '$_POST[zip]', '$_POST[address]')");
 
     //Get location id
@@ -60,13 +60,13 @@ if ($_POST['type']) {
     }
 
     if ($_POST['type'] = '1'){
-        $mysqli->query("INSERT INTO Gym (gymId, name, image, bio, published) VALUES "
+        echo $mysqli->query("INSERT INTO Gym (gymId, name, image, bio, published) VALUES "
             . "('$id', '$_POST[name]', '$target_file','$_POST[description]', '0')") == true;
     }else if ($_POST['type'] == '2'){
-        $mysqli->query("INSERT INTO Store (storeId, name, image, bio, published) VALUES "
+        echo $mysqli->query("INSERT INTO Store (storeId, name, image, bio, published) VALUES "
             . "('$id', '$_POST[name]', '$target_file','$_POST[description]', '0')");
     }else if ($_POST['type'] == '3'){
-        $mysqli->query("INSERT INTO Site (siteId, name, image, bio, lat, lng, directions) VALUES "
+        echo $mysqli->query("INSERT INTO Site (siteId, name, image, bio, lat, lng, directions) VALUES "
             . "('$id', '$_POST[name]', '$target_file','$_POST[description]', '$_POST[lat]', '$_POST[lng]', '$_POST[directions]')");
     }
 }
