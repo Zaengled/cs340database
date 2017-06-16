@@ -19,7 +19,6 @@ if ($_GET["objid"]) {
 
 }
 ?>
-
     <div class="row">
         <div class="col-lg-12">
             <div class="panel panel-default"> <!--Gym info panel-->
