@@ -11,14 +11,14 @@ if (!$mysqli) {
 <div class="row">
     <div class="col-lg-12">
         <div class="col-md-6 col-md-offset-3">
-            <form class="input-group">
+            <form onsubmit="grabResults()">
                 <div class="input-group">
-                                <span class="input-group-btn">
+                    <span class="input-group-btn">
                 <button class="btn btn-default"><span class="glyphicon glyphicon-screenshot"></span></button>
             </span>
                     <input class="form-control" type="text" id="city" placeholder="Enter City...">
                     <span class="input-group-btn">
-                <button class="btn btn-primary" onclick="grabResults()">Search</button>
+                <button class="btn btn-primary" type="submit">Search</button>
             </span>
                 </div>
             </form>
@@ -30,7 +30,7 @@ if (!$mysqli) {
             </div>
             <ul class="list-group" id="gyms">
                 <?php
-                    echo "<li class='list-group-item'>Nothing Nearby!</li>";
+                echo "<li class='list-group-item'>Nothing Nearby!</li>";
                 ?>
             </ul>
         </div>
@@ -40,20 +40,20 @@ if (!$mysqli) {
             </div>
             <ul class="list-group" id="stores">
                 <?php
-                    echo "<li class='list-group-item'>Nothing Nearby!</li>";
+                echo "<li class='list-group-item'>Nothing Nearby!</li>";
                 ?>
             </ul>
         </div>
-		<div class="panel panel-default">
+        <div class="panel panel-default">
             <div class="panel-heading">
                 Outdoor Sites
             </div>
             <ul class="list-group" id="outdoor">
                 <?php
-                    echo "<li class='list-group-item'>Nothing Nearby!</li>";
+                echo "<li class='list-group-item'>Nothing Nearby!</li>";
                 ?>
             </ul>
-	    <div style="display: none;" id="city"><span id="city"></span></div>
+            <div style="display: none;" id="city"><span id="city"></span></div>
         </div>
     </div>
 </div>
