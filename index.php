@@ -12,11 +12,11 @@ if (!$mysqli) {
     <div class="col-lg-12">
         <div class="input-group">
             <span class="input-group-btn">
-                <span class="glyphicon glyphicon-screenshot"></span>
+                <button class="btn btn-default"><span class="glyphicon glyphicon-screenshot"></span></button>
             </span>
             <input type="text" id="city" placeholder="Enter City...">
             <span class="input-group-btn">
-                Search
+                <button class="btn btn-primary" onclick="grabResults()">Search</button>
             </span>
         </div>
         <h2 id="enterC">Enter City: <input type="text" id="city"> <button type="button" onclick="grabResults()">Submit</button></h2>
