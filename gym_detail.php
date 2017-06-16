@@ -16,7 +16,7 @@ foreach ($_POST as $key => $value) {
 }
 echo '<br><br>';
 
-if (isset($_POST["fileToUpload"])) {
+/*if (isset($_POST["fileToUpload"])) {
 
     $target_dir = "uploads/";
     $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
@@ -63,7 +63,7 @@ if (isset($_POST["fileToUpload"])) {
             //echo "Sorry, there was an error uploading your file.";
         }
     }
-}
+}*/
 include 'connect.php';
 
 if ($mysqli->query("INSERT INTO GymAndLocation (name, image, bio, address, city, state, zip)"
