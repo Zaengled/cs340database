@@ -1,5 +1,5 @@
-<?php include 'header.php' ?>
 <?php
+include 'header.php';
 include 'connect.php';
 
 if ($_GET["objid"]) {
@@ -60,4 +60,4 @@ if ($location['published'] == 1 || $_SESSION['admin']) {
         This store hasn't been published yet -- check back in a few days
     </p>
     <?php}?>
-<?php include 'footer.php' ?>
+<?php include 'footer.php'; ?>
