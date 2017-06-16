@@ -11,7 +11,7 @@ if ($_SESSION['admin']) {
     }
 
     $gyms = mysqli_query($mysqli, 'SELECT * FROM GymAndLocation WHERE published = "0"');
-    $stores = mysqli_query($mysqli, 'SELECT * FROM Store where published = "0"');
+    $stores = mysqli_query($mysqli, 'SELECT * FROM StoreAndLocation where published = "0"');
 
     ?>
     <h2>Admin Console</h2>
