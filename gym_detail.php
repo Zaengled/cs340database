@@ -34,7 +34,9 @@ if ($_GET["objid"]) {
                 <div class="panel-body">
                     <table>
                         <tr>
-                            <td id="imageslot" style="padding:15px;"></td>
+                            <td id="imageslot" style="padding:15px;">
+                                <?php echo "<img src='$location[image]'>"?>
+                            </td>
                             <td>
                                 <p>
                                     <?php echo $location['bio']; ?>
