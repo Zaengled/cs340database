@@ -13,10 +13,11 @@ $result = mysqli_query($mysqli, $sql);
                 <h4>Suggest a Store</h4>
             </div>
             <div class="modal-body">
-                <form action="store_detail.php" method="post" enctype="multipart/form-data">
+                <form action="upload_location.php" method="post" enctype="multipart/form-data">
+                    <input type="hidden" name="type" value="2">
                     <div class="form-group">
                         <label for="store_name">Name</label>
-                        <input id="store_name" type="text" class="form-control" name="title" placeholder="Name">
+                        <input id="store_name" type="text" class="form-control" name="name" placeholder="Name">
                     </div>
                     <div class="form-group">
                         <label for="store_image">Store Image</label>
@@ -24,13 +25,13 @@ $result = mysqli_query($mysqli, $sql);
                     </div>
                     <div class="form-group">
                         <label for="store_desc">Description</label>
-                        <textarea class="form-control" id="store_desc" name="store_desc" placeholder="Add a description"></textarea>
+                        <textarea class="form-control" id="store_desc" name="description" placeholder="Add a description"></textarea>
                     </div>
                     <fieldset class="form-group" id="address" name="address">
                         <label for="address">Address</label>
                         <div class="row">
                             <div class="form-group">
-                                <input type="text" class="form-control" name="street" placeholder="Street">
+                                <input type="text" class="form-control" name="address" placeholder="Street">
                             </div>
                         </div>
                         <div class="row">
