@@ -19,7 +19,6 @@ if (!$mysqli) {
                 <button class="btn btn-primary" onclick="grabResults()">Search</button>
             </span>
         </div>
-        <h2 id="enterC">Enter City: <input type="text" id="city"> <button type="button" onclick="grabResults()">Submit</button></h2>
         <div class="panel panel-default">
             <div class="panel-heading">
                 Gyms
