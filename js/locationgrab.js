@@ -4,7 +4,7 @@ function grabResults(){
 	
 	myCity = document.getElementById("city").value;
 	myCity = myCity.replace(/[^0-9a-z]/gi, '');
-	document.getElementById("enterC").innerHTML = "In " + myCity+"!";
+	//document.getElementById("enterC").innerHTML = "In " + myCity+"!";
 	
 	var xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function(){
