@@ -24,8 +24,10 @@ $result = mysqli_query($mysqli, $sql);
                         <label for="gym_body">Body</label>
                         <textarea class="form-control" name="gym_body" placeholder="Add a description"></textarea>
                     </div>
-                    <div class="row form-group">
+                    <div class="row">
+                        <div class="form-group">
                         <input type="text" class="form-control" name="street" placeholder="Street">
+                        </div>
                     </div>
                     <div class="row">
                         <div class="form-group col-md-4">
