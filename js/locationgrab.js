@@ -28,7 +28,7 @@ $(document).ready(function () {
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
-                document.getElementById("gyms").innerHTML = this.responseText;
+                $("#gyms").html(this.responseText);
             }
         };
         xhttp.open("GET", "cityreturn.php?q=" + myCity + "&t=1", true);
@@ -37,7 +37,7 @@ $(document).ready(function () {
         var xhttp2 = new XMLHttpRequest();
         xhttp2.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
-                document.getElementById("stores").innerHTML = this.responseText;
+                $("#stores").html(this.responseText);
             }
         };
         xhttp2.open("GET", "cityreturn.php?q=" + myCity + "&t=2", true);
@@ -46,7 +46,7 @@ $(document).ready(function () {
         var xhttp3 = new XMLHttpRequest();
         xhttp3.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
-                document.getElementById("outdoor").innerHTML = this.responseText;
+                $("#outdoor").html(this.responseText);
             }
         };
         xhttp3.open("GET", "cityreturn.php?q=" + myCity + "&t=3", true);
