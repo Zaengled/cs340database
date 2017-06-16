@@ -3,7 +3,6 @@ include 'header.php';
 include 'connect.php';
 if ($_SESSION['admin']) {
     if (isset($_GET['approve'])){
-        echo $_GET['approve'];
         $mysqli->query("CALL publishGymOrStore($_GET[approve])");
     }
     if (isset($_GET['delete'])){
@@ -49,7 +48,7 @@ if ($_SESSION['admin']) {
                 echo "<li class='list-group-item clearfix' >"
                     . "<h4>$gym[name] <small>$gym[objid]</small>"
                     . "<div style='float:right;' class='btn-group' role='group'>"
-                    . "<a href='admin_list.php?publish=$gym[objid]' class='btn btn-default' title='Publish'>"
+                    . "<a href='admin_list.php?approve=$gym[objid]' class='btn btn-default' title='Publish'>"
                     . "<span class='glyphicon glyphicon-ok'></span></a>"
                     . "<a href='admin_list.php?delete=$gym[objid]' class='btn btn-default' title='Delete'>"
                     . "<span class='glyphicon glyphicon-trash'></span></a>"
