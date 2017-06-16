@@ -10,14 +10,19 @@ if (!$mysqli) {
 <script src="js/locationgrab.js"></script>
 <div class="row">
     <div class="col-lg-12">
-        <div class="col-md-6 col-md-offset-3 input-group">
-            <span class="input-group-btn">
+        <div class="col-md-6 col-md-offset-3">
+            <form class="input-group">
+                <div class="input-group">
+                                <span class="input-group-btn">
                 <button class="btn btn-default"><span class="glyphicon glyphicon-screenshot"></span></button>
             </span>
-            <input class="form-control" type="text" id="city" placeholder="Enter City...">
-            <span class="input-group-btn">
+                    <input class="form-control" type="text" id="city" placeholder="Enter City...">
+                    <span class="input-group-btn">
                 <button class="btn btn-primary" onclick="grabResults()">Search</button>
             </span>
+                </div>
+            </form>
+
         </div>
         <div class="panel panel-default">
             <div class="panel-heading">
