@@ -81,4 +81,5 @@ if ($_POST['type']) {
             echo 'Added Site';
         }
     }
+    header("Location: index.php");
 }
