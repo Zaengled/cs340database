@@ -64,7 +64,7 @@ if ($_POST['type']) {
         }
     }
 
-    if ($_POST['type'] = '1'){
+    if ($_POST['type'] == '1'){
         if($mysqli->query("INSERT INTO Gym (gymId, name, image, bio, published) VALUES "
             . "('$id', '$_POST[name]', '$target_file','$_POST[description]', '0')") == true){
             echo 'Added Gym';
