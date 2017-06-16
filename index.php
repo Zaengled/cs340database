@@ -8,6 +8,7 @@ if (!$mysqli) {
 ?>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 <script src="js/locationgrab.js"></script>
+<div class="row">
     <form class="col-lg-6 col-lg-offset-3">
         <div class="input-group">
             <span class="input-group-btn">
@@ -49,4 +50,5 @@ if (!$mysqli) {
         </ul>
         <div style="display: none;" id="city"><span id="city"></span></div>
     </div>
+</div>
 <?php include 'footer.php'; ?>
