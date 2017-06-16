@@ -4,7 +4,14 @@ include 'connect.php';
 $gyms = mysqli_query($mysqli, 'SELECT * FROM GymAndLocation WHERE published = "0"');
 $stores = mysqli_query($mysqli, 'SELECT * FROM Store where published = "0"');
 
-if ($_SESSION['admin']) { ?>
+if ($_SESSION['admin']) {
+    if (isset($_GET['approve'])){
+        $mysqli->query("EXECUTE publishGymOrStore($_GET[approve])");
+    }
+    if (isset($_GET['delete'])){
+        $mysqli->query("DELETE FROM Location WHERE objid=$_GET[delete]")
+    }
+    ?>
     <h2>Admin Console</h2>
     <div class="panel panel-default">
         <div class="panel-heading">
@@ -16,10 +23,10 @@ if ($_SESSION['admin']) { ?>
                 echo "<li class='list-group-item clearfix' >"
                     . "<h4>$gym[name]"
                     . "<div style='float:right;' class='btn-group' role='group'>"
-                    . "<button class='btn btn-default' title='Publish'>"
-                    . "<span class='glyphicon glyphicon-ok'></span></button>"
-                    . "<button class='btn btn-default' title='Delete'>"
-                    . "<span class='glyphicon glyphicon-trash'></span></button>"
+                    . "<a href='admin_list.php?approve=$gym[objid]' class='btn btn-default' title='Publish'>"
+                    . "<span class='glyphicon glyphicon-ok'></span></a>"
+                    . "<a href='admin_list.php?delete=$gym[objid]' class='btn btn-default' title='Delete'>"
+                    . "<span class='glyphicon glyphicon-trash'></span></a>"
                     . "</div></h4>"
                     . "<p>$gym[bio]</p>"
                     . "</li>";
