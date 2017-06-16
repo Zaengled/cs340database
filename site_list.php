@@ -96,7 +96,7 @@ $result = mysqli_query($mysqli, $sql);
             <?php
             if ($_SESSION['valid']==true){
                 echo "<a href='#'"
-                    ."onclick=\"document.getElementById('new_store').style.display = 'block'\""
+                    ."onclick=\"document.getElementById('new_site').style.display = 'block'\""
                     .">Add a site <span class='glyphicon glyphicon-plus-sign'></span></a>";
             }else{
                 echo "<a onclick=\"document.getElementById('id01').style.display='block'\">Login"
