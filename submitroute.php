@@ -3,10 +3,10 @@
 
 <?php 
 	if ($_GET["objid"]){
-		if ($_GET["type"] == 1){
+		if ($_GET["type"] == '1'){
 			$sql = "SELECT * FROM `GymAndLocation` WHERE `objid` = ".$_GET["objid"];
 		}
-		else if ($_GET["type"] == 2){
+		else {
 			$sql = "SELECT * FROM `SiteAndLocation` WHERE `objid` = ".$_GET["objid"];
 		}
 		$result = mysqli_query($mysqli, $sql);
