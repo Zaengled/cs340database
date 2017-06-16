@@ -28,6 +28,10 @@ $result = mysqli_query($mysqli, $sql);
                         <label for="store_desc">Description</label>
                         <textarea class="form-control" id="store_desc" name="description" placeholder="Add a description"></textarea>
                     </div>
+                    <div class="form-group">
+                        <label for="directions">Directions</label>
+                        <textarea class="form-control" id="directions" name="directions" placeholder="Add directions"></textarea>
+                    </div>
                     <fieldset class="form-control" id="coordinates">
                         <div class="row">
                             <div class="form-group col-md-6">
