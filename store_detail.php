@@ -51,15 +51,4 @@ if ($_GET["objid"]) {
         </div>
     </div>
 <?php include 'reviews_inset.php' ?>
-
-<script>
-		$('document').ready(
-			function(){
-				if("<?php echo $location['image'];?>" != ""){
-					document.getElementById("imageslot").innerHTML = "<img style='border:1px solid black;' src='uploads/<?php echo $location['image']; ?>'>"
-				}
-			}
-		)
-	</script>
-
 <?php include 'footer.php' ?>
