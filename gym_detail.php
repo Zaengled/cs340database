@@ -10,7 +10,7 @@ $id = $mysqli->insert_id;
 if (isset($_POST["fileToUpload"])) {
 
     $target_dir = "uploads/";
-    $target_file = $target_dir . htmlspecialchars($_POST['name']);
+    $target_file = $target_dir . str_replace(' ', '-', $_POST['name']);
     $uploadOk = 1;
     $error = null;
     $imageFileType = pathinfo($target_file, PATHINFO_EXTENSION);
@@ -54,8 +54,8 @@ if (isset($_POST["fileToUpload"])) {
     }
 }
 
-$mysqli->query("INSERT INTO Gym (gymId, name, image, bio, published) VALUES ".
-        "('$id', '$_POST[title]', '$target_file','$_POST[gym_body]', '0')");
+$mysqli->query("INSERT INTO Gym (gymId, name, image, bio, published) VALUES "
+        . "('$id', '$_POST[title]', '$target_file','$_POST[gym_body]', '0')");
 
 if ($_GET["objid"] || $id) {
     if ($_GET["objid"]){$id=$_GET["objid"];}
