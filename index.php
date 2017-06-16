@@ -11,7 +11,7 @@ if (!$mysqli) {
 <div class="row">
     <div class="col-lg-12">
         <div class="col-md-6 col-md-offset-3">
-            <form onsubmit="grabResults()">
+            <form action='#' onsubmit="grabResults()">
                 <div class="input-group">
                     <span class="input-group-btn">
                 <button class="btn btn-default"><span class="glyphicon glyphicon-screenshot"></span></button>
