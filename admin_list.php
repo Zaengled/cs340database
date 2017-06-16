@@ -1,9 +1,6 @@
 <?php
 include 'header.php';
 include 'connect.php';
-$gyms = mysqli_query($mysqli, 'SELECT * FROM GymAndLocation WHERE published = "0"');
-$stores = mysqli_query($mysqli, 'SELECT * FROM Store where published = "0"');
-
 if ($_SESSION['admin']) {
     if (isset($_GET['approve'])){
         $mysqli->query("EXECUTE publishGymOrStore($_GET[approve])");
@@ -11,6 +8,10 @@ if ($_SESSION['admin']) {
     if (isset($_GET['delete'])){
         $mysqli->query("DELETE FROM Location WHERE objid=$_GET[delete]");
     }
+
+    $gyms = mysqli_query($mysqli, 'SELECT * FROM GymAndLocation WHERE published = "0"');
+    $stores = mysqli_query($mysqli, 'SELECT * FROM Store where published = "0"');
+
     ?>
     <h2>Admin Console</h2>
     <div class="panel panel-default">
