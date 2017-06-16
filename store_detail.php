@@ -31,17 +31,16 @@ if ($_GET["objid"]) {
             </h2>
         </div>
         <div class="panel-body">
-		<table>
-						<tr>
-							<td id="imageslot" style="padding:15px;"></td>
-							<td>
-								<p>
-									<?php echo $location['bio']; ?>
-								</p>
-							</td>
-						</tr>
-					</table>
-            <div class="well" style="margin-bottom:0;">
+            <div class="col-md-3">
+                <?php echo "<img class='img-responsive' src='$location[image]'>";?>
+            </div>
+            <div class="col-md-9">
+                <p>
+                    <?php echo $location['bio'];?>
+                </p>
+            </div>
+        </div>
+            <div class="row well" style="margin-bottom:0;">
                 <span class="glyphicon glyphicon-home"></span>
                 <?php $address = "$location[address], $location[city], $location[state] $location[zip]";
                 echo "<a target='_blank' href='https://maps.google.com/?q=$address'>";
