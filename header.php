@@ -23,6 +23,10 @@
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDd-rMEMfv6gsgrNJX7HVm0xm8D_xkWua8&callback=initMap">
+    </script>
+
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
