@@ -68,18 +68,21 @@ if ($_POST['type']) {
         if($mysqli->query("INSERT INTO Gym (gymId, name, image, bio, published) VALUES "
             . "('$id', '$_POST[name]', '$target_file','$_POST[description]', '0')") == true){
             echo 'Added Gym';
-            header("Location: gym_list.php");
         }
+        header("Location: gym_list.php");
+
     }else if ($_POST['type'] == '2'){
         if ($mysqli->query("INSERT INTO Store (storeId, name, image, bio, published) VALUES "
             . "('$id', '$_POST[name]', '$target_file','$_POST[description]', '0')")){
             echo 'Added Store';
         }
+        header("Location: store_list.php");
     }else if ($_POST['type'] == '3'){
         if ($mysqli->query("INSERT INTO Site (siteId, name, image, bio, lat, lng, directions) VALUES "
             . "('$id', '$_POST[name]', '$target_file','$_POST[description]', '$_POST[lat]', '$_POST[lng]', '$_POST[directions]')")){
             echo 'Added Site';
         }
+        header("Location: site_list.php");
     }
     header("Location: index.php");
 }
