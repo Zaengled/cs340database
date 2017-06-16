@@ -49,7 +49,7 @@
 	$BIO = $_POST['bio'];
 	$SKILL = $_POST['skill'];
 	//echo $IMAGE . " " . $OBJID . " " .$CONTENT;
-	if($USER != NULL && $BIO != NULL && $SKILL != NULL && $uploadOK != 1){
+	if($USER != NULL && $BIO != NULL && $SKILL != NULL && $IMAGE != ""){
 		$result = $mysqli->query("UPDATE `User` SET `Skill` = ".$SKILL.", `bio` = '".$BIO."', `avatar` = '".$IMAGE."' WHERE `userName` = '" .$USER ."'");
 	} else if ($USER != NULL && $BIO != NULL && $SKILL != NULL){
 		$result = $mysqli->query("UPDATE `User` SET `Skill` = ".$SKILL.", `bio` = '".$BIO."' WHERE `userName` = '" .$USER ."'");

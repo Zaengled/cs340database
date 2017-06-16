@@ -37,7 +37,7 @@
                     }
                 }
                 echo "</span>";
-                echo "<span class='fill'>" . $row["userName"] . "</span>";
+                echo "<span class='fill'>" . htmlspecialchars($row["userName"]) . "</span>";
                 echo "<span class='timestamp'>" . $row["timestamp"] . "</span></a>";
             }
         } else {
