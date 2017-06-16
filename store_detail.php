@@ -59,7 +59,7 @@ $mysqli->query("INSERT INTO Store (storeId, name, image, bio, published) VALUES 
 if ($_GET["objid"] || $id) {
     if ($_GET["objid"]){$id=$_GET["objid"];}
 
-    $sql = "SELECT * FROM `GymAndLocation` WHERE `objid` = " . $id;
+    $sql = "SELECT * FROM `StoreAndLocation` WHERE `objid` = " . $id;
     $result = mysqli_query($mysqli, $sql);
     $sql2 = "SELECT * FROM `Reviews` WHERE `objid` = " . $id;
     $reviews = mysqli_query($mysqli, $sql2);
