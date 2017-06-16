@@ -1,5 +1,5 @@
+<?php include 'header.php' ?>
 <?php
-include 'header.php';
 include 'connect.php';
 
 if ($_GET["objid"]) {
@@ -18,9 +18,7 @@ if ($_GET["objid"]) {
     }
 
 }
-
-if ($location['published'] == 1 || $_SESSION['admin']==true) {
-    ?>
+?>
     <div class="row">
         <div class="panel panel-default"> <!--Gym info panel-->
             <div class="panel-heading">
@@ -52,12 +50,5 @@ if ($location['published'] == 1 || $_SESSION['admin']==true) {
             </div>
         </div>
     </div>
-    <?php
-    include 'reviews_inset.php';
-} else {?>
-    <h4>Uh Oh!</h4>
-    <p>
-        This store hasn't been published yet -- check back in a few days
-    </p>
-    <?php}?>
-<?php include 'footer.php'; ?>
+<?php include 'reviews_inset.php' ?>
+<?php include 'footer.php' ?>
