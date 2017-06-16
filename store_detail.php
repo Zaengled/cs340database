@@ -19,7 +19,7 @@ if ($_GET["objid"]) {
 
 }
 
-if ($location['published'] == 1 || $_SESSION['admin']) {
+if ($location['published'] == 1 || $_SESSION['admin']==true) {
     ?>
     <div class="row">
         <div class="panel panel-default"> <!--Gym info panel-->
@@ -54,7 +54,7 @@ if ($location['published'] == 1 || $_SESSION['admin']) {
     </div>
     <?php
     include 'reviews_inset.php';
-}else {?>
+} else {?>
     <h4>Uh Oh!</h4>
     <p>
         This store hasn't been published yet -- check back in a few days
