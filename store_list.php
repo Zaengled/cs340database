@@ -4,7 +4,7 @@ include 'connect.php';
 if (!$mysqli) {
     die('Could not connect: ' . mysqli_error());
 }
-$sql = "SELECT * FROM `StoreAndLocation`";
+$sql = "SELECT * FROM `StoreAndLocation` WHERE published='1'";
 $result = mysqli_query($mysqli, $sql);
 ?>
     <div id="new_store" class="modal">
