@@ -3,6 +3,7 @@ include 'header.php';
 include 'connect.php';
 if ($_SESSION['admin']) {
     if (isset($_GET['approve'])){
+        echo $_GET['approve'];
         $mysqli->query("CALL publishGymOrStore($_GET[approve])");
     }
     if (isset($_GET['delete'])){
