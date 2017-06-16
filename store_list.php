@@ -7,6 +7,53 @@ if (!$mysqli) {
 $sql = "SELECT * FROM `StoreAndLocation`";
 $result = mysqli_query($mysqli, $sql);
 ?>
+    <div id="new_store" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Suggest a Store</h4>
+            </div>
+            <div class="modal-body">
+                <form action="store_detail.php" method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="store_name">Name</label>
+                        <input id="store_name" type="text" class="form-control" name="title" placeholder="Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="store_image">Store Image</label>
+                        <input type="file" name="fileToUpload" id="store_image">
+                    </div>
+                    <div class="form-group">
+                        <label for="store_desc">Description</label>
+                        <textarea class="form-control" id="store_desc" name="store_desc" placeholder="Add a description"></textarea>
+                    </div>
+                    <fieldset class="form-group" id="address" name="address">
+                        <label for="address">Address</label>
+                        <div class="row">
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="street" placeholder="Street">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-4">
+                                <input type="text" class="form-control" name="city" placeholder="City">
+                            </div>
+                            <div class="col-md-4 form-group">
+                                <input type="text" class="form-control" name="state" placeholder="State">
+                            </div>
+                            <div class="col-md-4 form-group">
+                                <input type="text" class="form-control" name="zip" placeholder="Zip"
+                            </div>
+                        </div>
+                    </fieldset>
+                    <div class="form-group">
+                        <button class="btn btn-primary" type="submit">Submit</button>
+                    </div>
+            </div>
+            </form>
+        </div>
+    </div>
+    </div>
+
     <div class="panel panel-default">
         <div class="panel-heading">
             <h3>Stores</h3>
@@ -30,11 +77,13 @@ $result = mysqli_query($mysqli, $sql);
         </ul>
         <div class="panel-footer">
             <?php
-            if ($_SESSION['valid']==true){
-                echo "<a href='#'>Suggest a store <span class='glyphicon glyphicon-plus-sign'></span></a>";
-            }else{
+            if ($_SESSION['valid'] == true) {
+                echo "<a"
+                    . "onclick=\"document.getElementById('new_gym').style.display='block'\""
+                    .">Suggest a store <span class='glyphicon glyphicon-plus-sign'></span></a>";
+            } else {
                 echo "<a onclick=\"document.getElementById('id01').style.display='block'\">Login"
-                    ."</a> to suggest stores!";
+                    . "</a> to suggest stores!";
             }
             ?>
         </div>
