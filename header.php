@@ -120,7 +120,7 @@
                                 ."<span class='sr-only'>Toggle Dropdown</span>"
                             ."</button>"
                             ."<ul class='dropdown-menu'>"
-                                ."<li><a href='#'>Edit</a></li>"
+                                ."<li><a href='profile.php?usr=".$_SESSION['userName']."'>Edit</a></li>"
                                 ."<li role='seperator' class='divider'></li>"
                                 ."<li><a href='logout.php'>Logout</a></li>"
                             ."</ul>"
